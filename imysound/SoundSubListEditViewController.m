@@ -11,7 +11,7 @@
 #import "SoundSub.h"
 #import "SoundSubEditViewController.h"
 #import "CommonUtils.h"
-#import "SVInputDialog.h"
+#import "YXInputDialog.h"
 
 @interface SoundSubListEditViewController ()
 
@@ -104,7 +104,7 @@
         [self presentModalViewController:nc animated:YES];
     }else{
         SoundSub *sub = [self.soundSubList objectAtIndex:indexPath.row];
-        [SVInputDialog showWithTitle:@"输入新的分段名称" message:@"" initText:sub.title cancelButtonTitle:@"取消" approveButtonTitle:@"确定" completion:^(NSString *input) {
+        [YXInputDialog showWithTitle:@"输入新的分段名称" message:@"" initText:sub.title cancelButtonTitle:@"取消" approveButtonTitle:@"确定" completion:^(NSString *input) {
             if(input.length != 0){
                 sub.title = input;
                 [[SoundSubManager sharedManager] setSubListWithArray:self.soundSubList forIdentifier:self.soundFilePath];

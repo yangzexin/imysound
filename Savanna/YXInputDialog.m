@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 yangzexin. All rights reserved.
 //
 
-#import "SVInputDialog.h"
+#import "YXInputDialog.h"
 
-@interface SVInputDialog () <UIAlertViewDelegate>
+@interface YXInputDialog () <UIAlertViewDelegate>
 
 @property(nonatomic, retain)UIAlertView *alertView;
 @property(nonatomic, copy)void(^completion)(NSString *);
 
 @end
 
-@implementation SVInputDialog
+@implementation YXInputDialog
 
 - (void)dealloc
 {
@@ -91,7 +91,7 @@
    approveButtonTitle:(NSString *)approveButtonTitle
            completion:(void(^)(NSString *input))completion
 {
-    SVInputDialog *inputDialog = [[SVInputDialog new] autorelease];
+    YXInputDialog *inputDialog = [[YXInputDialog new] autorelease];
     [inputDialog showWithTitle:title
                        message:message
                       initText:initText

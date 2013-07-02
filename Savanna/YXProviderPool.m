@@ -6,16 +6,16 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "SVProviderPool.h"
+#import "YXProviderPool.h"
 
-@interface SVProviderPool ()
+@interface YXProviderPool ()
 
 @property(nonatomic, retain)NSMutableArray *providerList;
 - (void)releaseAllProvider;
 
 @end
 
-@implementation SVProviderPool
+@implementation YXProviderPool
 
 @synthesize providerList;
 
@@ -35,7 +35,7 @@
     return self;
 }
 
-- (void)addProvider:(id<SVProviderPoolable>)provider
+- (void)addProvider:(id<YXProviderPoolable>)provider
 {
     [self.providerList addObject:provider];
 }
@@ -43,13 +43,13 @@
 - (void)tryToReleaseProvider
 {
     NSMutableArray *wantReleaseList = [NSMutableArray array];
-    for(id<SVProviderPoolable> provider in self.providerList){
+    for(id<YXProviderPoolable> provider in self.providerList){
         if([provider respondsToSelector:@selector(providerShouldBeRemoveFromPool)] && [provider providerShouldBeRemoveFromPool]){
             [provider providerWillRemoveFromPool];
             [wantReleaseList addObject:provider];
         }
     }
-    for(id<SVProviderPoolable> provider in wantReleaseList){
+    for(id<YXProviderPoolable> provider in wantReleaseList){
         NSLog(@"recycle remove:%@", provider);
         [self.providerList removeObject:provider];
     }
@@ -57,7 +57,7 @@
 
 - (void)releaseAllProvider
 {
-    for(id<SVProviderPoolable> provider in self.providerList){
+    for(id<YXProviderPoolable> provider in self.providerList){
         [provider providerWillRemoveFromPool];
         NSLog(@"force remove:%@", provider);
     }
@@ -65,9 +65,9 @@
 }
 
 #pragma mark - SharedPool
-+ (SVProviderPool *)sharedPool
++ (YXProviderPool *)sharedPool
 {
-    static SVProviderPool *instance = nil;
+    static YXProviderPool *instance = nil;
     if(instance == nil){
         @synchronized(self.class){
             instance = [[self.class alloc] init];
@@ -100,10 +100,10 @@
     return [[self sharedPoolDictionary] objectForKey:key];
 }
 
-+ (void)addProviderToSharedPool:(id<SVProviderPoolable>)provider identifier:(id)identifier
++ (void)addProviderToSharedPool:(id<YXProviderPoolable>)provider identifier:(id)identifier
 {
     @synchronized(self.class){
-        SVProviderPool *pool = [self sharedPool];
+        YXProviderPool *pool = [self sharedPool];
         [[self sharedPoolDictionary] setObject:provider forKey:[self identifierForObj:identifier]];
         [pool addProvider:provider];
         if(pool.providerList.count > 5){
@@ -115,8 +115,8 @@
 + (void)cleanWithIdentifier:(id)identifier
 {
     @synchronized(self.class){
-        SVProviderPool *pool = [self sharedPool];
-        id<SVProviderPoolable> provider = [[self sharedPoolDictionary] objectForKey:[self identifierForObj:identifier]];
+        YXProviderPool *pool = [self sharedPool];
+        id<YXProviderPoolable> provider = [[self sharedPoolDictionary] objectForKey:[self identifierForObj:identifier]];
         if(provider){
             [provider providerWillRemoveFromPool];
             [pool.providerList removeObject:provider];

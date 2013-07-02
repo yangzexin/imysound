@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class SVProviderPool;
+@class YXProviderPool;
 
-@protocol SVProviderPoolable <NSObject>
+@protocol YXProviderPoolable <NSObject>
 
 @required
 - (void)providerWillRemoveFromPool;
@@ -20,13 +20,13 @@
 
 @end
 
-@interface SVProviderPool : NSObject
+@interface YXProviderPool : NSObject
 
-- (void)addProvider:(id<SVProviderPoolable>)provider;
+- (void)addProvider:(id<YXProviderPoolable>)provider;
 - (void)tryToReleaseProvider;
 
 + (id)providerInPoolWithIdentifier:(id)identifier;
-+ (void)addProviderToSharedPool:(id<SVProviderPoolable>)provider identifier:(id)identifier;
++ (void)addProviderToSharedPool:(id<YXProviderPoolable>)provider identifier:(id)identifier;
 + (void)cleanWithIdentifier:(id)identifier;
 
 @end

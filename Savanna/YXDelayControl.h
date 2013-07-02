@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SVProviderPool.h"
+#import "YXProviderPool.h"
 
-@interface SVDelayControl : NSObject <SVProviderPoolable>
+@interface YXDelayControl : NSObject <YXProviderPoolable>
 
 - (id)initWithInterval:(NSTimeInterval)timeInterval completion:(void(^)())completion;
 - (id)start;

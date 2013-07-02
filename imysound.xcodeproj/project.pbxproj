@@ -9,11 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E055FDB17126C640019A6E6 /* FileGlossaryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E055FDA17126C640019A6E6 /* FileGlossaryManager.m */; };
 		3E055FDE17126CFA0019A6E6 /* SimpleFileKeyValueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E055FDD17126CFA0019A6E6 /* SimpleFileKeyValueManager.m */; };
-		3E055FE217127D380019A6E6 /* SVDelayControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E055FE117127D380019A6E6 /* SVDelayControl.m */; };
-		3E055FE517127D590019A6E6 /* SVProviderPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E055FE417127D590019A6E6 /* SVProviderPool.m */; };
 		3E055FE917128B630019A6E6 /* icon_glossary_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E055FE717128B630019A6E6 /* icon_glossary_list.png */; };
 		3E055FEA17128B630019A6E6 /* icon_glossary_list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E055FE817128B630019A6E6 /* icon_glossary_list@2x.png */; };
-		3E055FEF171294FA0019A6E6 /* SVInputDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E055FEE171294FA0019A6E6 /* SVInputDialog.m */; };
 		3E2B5FCD17110838004CA16E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FCC17110838004CA16E /* Default-568h@2x.png */; };
 		3E2B5FD017110898004CA16E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FD217110898004CA16E /* Localizable.strings */; };
 		3E2B5FD917111236004CA16E /* FileSoundSubManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2B5FD817111236004CA16E /* FileSoundSubManager.m */; };
@@ -23,6 +20,9 @@
 		3E2B5FE917111DC0004CA16E /* icon_news_list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FE717111DC0004CA16E /* icon_news_list@2x.png */; };
 		3E50D1DC160C6A8C00BA58C5 /* DialogTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E50D1DB160C6A8C00BA58C5 /* DialogTools.m */; };
 		3E6B6203162BB662004C1BCC /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B6202162BB662004C1BCC /* NowPlayingViewController.m */; };
+		3EDD85C6178267D2008C9E61 /* YXDelayControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD85C1178267D2008C9E61 /* YXDelayControl.m */; };
+		3EDD85C7178267D2008C9E61 /* YXInputDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD85C3178267D2008C9E61 /* YXInputDialog.m */; };
+		3EDD85C8178267D2008C9E61 /* YXProviderPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD85C5178267D2008C9E61 /* YXProviderPool.m */; };
 		676AB66C15ADBCC3004444C6 /* PlayItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 676AB66B15ADBCC3004444C6 /* PlayItem.m */; };
 		676AB67015ADBDA0004444C6 /* PlayQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 676AB66F15ADBDA0004444C6 /* PlayQueue.m */; };
 		676AB67415ADBF03004444C6 /* PlayQueueControlNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = 676AB67315ADBF03004444C6 /* PlayQueueControlNormal.m */; };
@@ -129,14 +129,8 @@
 		3E055FDA17126C640019A6E6 /* FileGlossaryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileGlossaryManager.m; sourceTree = "<group>"; };
 		3E055FDC17126CFA0019A6E6 /* SimpleFileKeyValueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleFileKeyValueManager.h; sourceTree = "<group>"; };
 		3E055FDD17126CFA0019A6E6 /* SimpleFileKeyValueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFileKeyValueManager.m; sourceTree = "<group>"; };
-		3E055FE017127D380019A6E6 /* SVDelayControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVDelayControl.h; sourceTree = "<group>"; };
-		3E055FE117127D380019A6E6 /* SVDelayControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVDelayControl.m; sourceTree = "<group>"; };
-		3E055FE317127D580019A6E6 /* SVProviderPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProviderPool.h; sourceTree = "<group>"; };
-		3E055FE417127D590019A6E6 /* SVProviderPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProviderPool.m; sourceTree = "<group>"; };
 		3E055FE717128B630019A6E6 /* icon_glossary_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_glossary_list.png; sourceTree = "<group>"; };
 		3E055FE817128B630019A6E6 /* icon_glossary_list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_glossary_list@2x.png"; sourceTree = "<group>"; };
-		3E055FED171294FA0019A6E6 /* SVInputDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVInputDialog.h; sourceTree = "<group>"; };
-		3E055FEE171294FA0019A6E6 /* SVInputDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVInputDialog.m; sourceTree = "<group>"; };
 		3E2B5FCC17110838004CA16E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3E2B5FD117110898004CA16E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3E2B5FD3171108ED004CA16E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -151,6 +145,12 @@
 		3E50D1DB160C6A8C00BA58C5 /* DialogTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialogTools.m; sourceTree = "<group>"; };
 		3E6B6201162BB662004C1BCC /* NowPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowPlayingViewController.h; sourceTree = "<group>"; };
 		3E6B6202162BB662004C1BCC /* NowPlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowPlayingViewController.m; sourceTree = "<group>"; };
+		3EDD85C0178267D2008C9E61 /* YXDelayControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXDelayControl.h; sourceTree = "<group>"; };
+		3EDD85C1178267D2008C9E61 /* YXDelayControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXDelayControl.m; sourceTree = "<group>"; };
+		3EDD85C2178267D2008C9E61 /* YXInputDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXInputDialog.h; sourceTree = "<group>"; };
+		3EDD85C3178267D2008C9E61 /* YXInputDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXInputDialog.m; sourceTree = "<group>"; };
+		3EDD85C4178267D2008C9E61 /* YXProviderPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXProviderPool.h; sourceTree = "<group>"; };
+		3EDD85C5178267D2008C9E61 /* YXProviderPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXProviderPool.m; sourceTree = "<group>"; };
 		676AB66A15ADBCC3004444C6 /* PlayItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayItem.h; sourceTree = "<group>"; };
 		676AB66B15ADBCC3004444C6 /* PlayItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayItem.m; sourceTree = "<group>"; };
 		676AB66E15ADBDA0004444C6 /* PlayQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayQueue.h; sourceTree = "<group>"; };
@@ -456,15 +456,15 @@
 		678586D515AC753D00B096C1 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				3EDD85C0178267D2008C9E61 /* YXDelayControl.h */,
+				3EDD85C1178267D2008C9E61 /* YXDelayControl.m */,
+				3EDD85C2178267D2008C9E61 /* YXInputDialog.h */,
+				3EDD85C3178267D2008C9E61 /* YXInputDialog.m */,
+				3EDD85C4178267D2008C9E61 /* YXProviderPool.h */,
+				3EDD85C5178267D2008C9E61 /* YXProviderPool.m */,
 				6785871415AC763F00B096C1 /* CacheManager */,
 				678586FF15AC760300B096C1 /* CodeUtils.h */,
 				6785870015AC760300B096C1 /* CodeUtils.m */,
-				3E055FE017127D380019A6E6 /* SVDelayControl.h */,
-				3E055FE117127D380019A6E6 /* SVDelayControl.m */,
-				3E055FED171294FA0019A6E6 /* SVInputDialog.h */,
-				3E055FEE171294FA0019A6E6 /* SVInputDialog.m */,
-				3E055FE317127D580019A6E6 /* SVProviderPool.h */,
-				3E055FE417127D590019A6E6 /* SVProviderPool.m */,
 				6785870115AC760300B096C1 /* CommonUtils.h */,
 				6785870215AC760300B096C1 /* CommonUtils.m */,
 				6785870315AC760300B096C1 /* DelayController.h */,
@@ -948,9 +948,9 @@
 				3E2B5FD917111236004CA16E /* FileSoundSubManager.m in Sources */,
 				3E055FDB17126C640019A6E6 /* FileGlossaryManager.m in Sources */,
 				3E055FDE17126CFA0019A6E6 /* SimpleFileKeyValueManager.m in Sources */,
-				3E055FE217127D380019A6E6 /* SVDelayControl.m in Sources */,
-				3E055FE517127D590019A6E6 /* SVProviderPool.m in Sources */,
-				3E055FEF171294FA0019A6E6 /* SVInputDialog.m in Sources */,
+				3EDD85C6178267D2008C9E61 /* YXDelayControl.m in Sources */,
+				3EDD85C7178267D2008C9E61 /* YXInputDialog.m in Sources */,
+				3EDD85C8178267D2008C9E61 /* YXProviderPool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

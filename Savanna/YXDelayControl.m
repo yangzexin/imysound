@@ -6,9 +6,9 @@
 //  Copyright (c) 2012年 gewara. All rights reserved.
 //
 
-#import "SVDelayControl.h"
+#import "YXDelayControl.h"
 
-@interface SVDelayControl ()
+@interface YXDelayControl ()
 
 @property(nonatomic, copy)void(^completion)();
 @property(nonatomic, assign)NSTimeInterval timeInterval;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation SVDelayControl
+@implementation YXDelayControl
 
 @synthesize completion;
 @synthesize timeInterval;

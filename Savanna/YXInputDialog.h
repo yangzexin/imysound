@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SVInputDialog : NSObject
+@interface YXInputDialog : NSObject
 
 + (void)showWithTitle:(NSString *)title
               message:(NSString *)message

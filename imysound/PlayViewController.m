@@ -15,7 +15,7 @@
 #import "PlayItem.h"
 #import "PlayQueueControlFactory.h"
 #import "NowPlayingViewController.h"
-#import "SVDelayControl.h"
+#import "YXDelayControl.h"
 
 #define kTrackDelayTimeInterval     3.0f
 
@@ -33,7 +33,7 @@ NSString *kPlayQueueDidPlayCompletely = @"kPlayQueueDidPlayCompletely";
 @property(nonatomic, retain)Timer *trackFinishTimer;
 
 @property(nonatomic, retain)UITableView *tableView;
-@property(nonatomic, retain)SVDelayControl *decidePreviousDelayControl;
+@property(nonatomic, retain)YXDelayControl *decidePreviousDelayControl;
 @property(nonatomic, assign)BOOL isInPreviousTrackDelay;
 
 - (void)playWithPlayItem:(PlayItem *)playItem;
@@ -194,7 +194,7 @@ NSString *kPlayQueueDidPlayCompletely = @"kPlayQueueDidPlayCompletely";
 {
     self.isInPreviousTrackDelay = NO;
     __block typeof(self) bself = self;
-    self.decidePreviousDelayControl = [[[SVDelayControl alloc] initWithInterval:kTrackDelayTimeInterval completion:^{
+    self.decidePreviousDelayControl = [[[YXDelayControl alloc] initWithInterval:kTrackDelayTimeInterval completion:^{
         bself.isInPreviousTrackDelay = YES;
     }] autorelease];
     [self.decidePreviousDelayControl start];
