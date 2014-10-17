@@ -31,7 +31,7 @@ static char *customHexList = "ASDFGHJKLZXCVBNM";
 
 + (NSString *)encodeWithData:(NSData *)data
 {
-    char *bytes = malloc(sizeof(unsigned char) * [data length]);
+    unsigned char *bytes = malloc(sizeof(unsigned char) * [data length]);
     [data getBytes:bytes];
     
     int len = sizeof(char) * [data length] * 2 + 1;

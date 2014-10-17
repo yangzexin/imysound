@@ -40,7 +40,7 @@
 
 @property(nonatomic, assign)id<TaskQueueDelegate> delegate;
 
-+ (TaskQueue *)newTaskQueue;
++ (TaskQueue *)taskQueue;
 - (void)addTask:(id<TaskExecutable>)task;
 - (void)addTask:(id<TaskExecutable>)task userData:(id)userData;
 - (void)removeTask:(id<TaskExecutable>)task;

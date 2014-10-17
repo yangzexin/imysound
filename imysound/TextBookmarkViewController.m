@@ -82,12 +82,12 @@
 #pragma mark - events
 - (void)onAddBookmarkBtnTapped
 {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"enter_bookmark_title", nil) 
+    UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"enter_bookmark_title", nil)
                                                         message:@"\n" 
                                                        delegate:self 
                                               cancelButtonTitle:NSLocalizedString(@"Cancel", nil) 
-                                              otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(15, 43, 252, 30)];
+                                              otherButtonTitles:NSLocalizedString(@"OK", nil), nil] autorelease];
+    UITextField *textField = [[[UITextField alloc] initWithFrame:CGRectMake(15, 43, 252, 30)] autorelease];
     [alertView addSubview:textField];
     textField.borderStyle = UITextBorderStyleRoundedRect;
     textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -96,7 +96,6 @@
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     [alertView show];
     [textField becomeFirstResponder];
-    [alertView release];
 }
 
 - (void)onDondBtnTapped

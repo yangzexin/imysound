@@ -34,7 +34,7 @@
     
     NSString *fileName = [CodeUtils encodeWithString:[NSString stringWithFormat:@"glossary+%@", identifier]];
     NSString *filePath = [[CommonUtils tmpPath] stringByAppendingPathComponent:fileName];
-    self.glossaryLibrary = [[DBKeyValueManager alloc] initWithDBName:identifier atFilePath:filePath];
+    self.glossaryLibrary = [[[DBKeyValueManager alloc] initWithDBName:identifier atFilePath:filePath] autorelease];
     
     return self;
 }

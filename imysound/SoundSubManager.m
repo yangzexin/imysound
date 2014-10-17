@@ -22,7 +22,7 @@
 {
     static id instance = nil;
     
-    @synchronized(instance){
+    @synchronized(self){
         if(instance == nil){
             instance = [[self.class alloc] init];
         }

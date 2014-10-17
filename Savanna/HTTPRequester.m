@@ -24,7 +24,7 @@
 
 @synthesize urlString;
 
-+ (HTTPRequester *)newHTTPRequester
++ (HTTPRequester *)HTTPRequester
 {
     return [[[HTTPRequester alloc] init] autorelease];
 }

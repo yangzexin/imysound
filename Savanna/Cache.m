@@ -27,7 +27,7 @@
     self = [super init];
     
     static NSDateFormatter *dateFormatter = nil;
-    @synchronized(dateFormatter){
+    @synchronized([self class]){
         if(dateFormatter == nil){
             dateFormatter = [[NSDateFormatter alloc] init];
             [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss.SSS"];

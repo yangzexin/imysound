@@ -24,7 +24,7 @@
 + (LuaHelper *)sharedInstance
 {
     static LuaHelper *instance;
-    @synchronized(instance){
+    @synchronized(self){
         if(instance == nil){
             instance = [[LuaHelper alloc] init];
         }

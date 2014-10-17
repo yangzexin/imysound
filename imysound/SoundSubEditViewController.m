@@ -259,13 +259,13 @@
         return;
     }
     if(self.beginTime != 0.0f || self.endTime != 0.0f){
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"enter_sub_name", nil) 
+        UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"enter_sub_name", nil)
                                                             message:@"\n" 
                                                            delegate:self 
                                                   cancelButtonTitle:NSLocalizedString(@"Cancel", nil) 
-                                                  otherButtonTitles:NSLocalizedString(@"OK", nil), nil];
+                                                  otherButtonTitles:NSLocalizedString(@"OK", nil), nil] autorelease];
         alertView.tag = ALERT_TAG_INPUT;
-        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(15, 43, 252, 30)];
+        UITextField *textField = [[[UITextField alloc] initWithFrame:CGRectMake(15, 43, 252, 30)] autorelease];
         [alertView addSubview:textField];
         textField.borderStyle = UITextBorderStyleRoundedRect;
         textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -274,7 +274,6 @@
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         [alertView show];
         [textField becomeFirstResponder];
-        [alertView release];
     }
 }
 

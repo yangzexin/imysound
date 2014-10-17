@@ -30,7 +30,7 @@
     self = [super init];
     
     self.soundFilePath = soundFilePath;
-    self.keyValue = [[SimpleFileKeyValueManager alloc] initWithFilePath:[NSString stringWithFormat:@"%@.playlist", self.soundFilePath]];
+    self.keyValue = [[[SimpleFileKeyValueManager alloc] initWithFilePath:[NSString stringWithFormat:@"%@.playlist", self.soundFilePath]] autorelease];
     
     return self;
 }

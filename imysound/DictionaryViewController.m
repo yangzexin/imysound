@@ -50,7 +50,7 @@
 + (DictionaryViewController *)sharedInstance
 {
     static DictionaryViewController *instance = nil;
-    @synchronized(instance){
+    @synchronized(self){
         if(instance == nil){
             instance = [[DictionaryViewController alloc] init];
         }

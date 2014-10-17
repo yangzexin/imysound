@@ -35,7 +35,7 @@
 + (Toast *)defaultToast
 {
     static Toast *instance = nil;
-    @synchronized(instance){
+    @synchronized(self){
         if(!instance){
             instance = [[Toast alloc] init];
         }

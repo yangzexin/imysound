@@ -25,7 +25,7 @@
 + (DBDictionaryCache *)sharedInstance
 {
     static DBDictionaryCache *instance = nil;
-    @synchronized(instance){
+    @synchronized(self){
         if(instance == nil){
             instance = [[DBDictionaryCache alloc] init];
         }

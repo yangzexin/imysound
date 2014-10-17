@@ -26,7 +26,7 @@ NSString *kNetworkStatusDidChangeNotification = @"kNetworkStatusDidChangeNotific
 + (NetworkManager *)sharedInstance
 {
     NetworkManager *instance = nil;
-    @synchronized(instance){
+    @synchronized(self){
         instance = [[NetworkManager alloc] init];
     }
     return instance;

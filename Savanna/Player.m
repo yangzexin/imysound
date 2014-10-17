@@ -34,7 +34,7 @@ NSString *kPlayerPlayPreviousNotification = @"kPlayerPlayPreviousNotification";
 + (Player *)sharedInstance
 {
     static Player *instance = nil;
-    @synchronized(instance){
+    @synchronized(self){
         if(!instance){
             instance = [[Player alloc] init];
         }

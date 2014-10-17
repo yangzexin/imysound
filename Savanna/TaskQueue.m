@@ -42,7 +42,7 @@
     return self;
 }
 
-+ (TaskQueue *)newTaskQueue
++ (TaskQueue *)taskQueue
 {
     return [[[TaskQueue alloc] init] autorelease];
 }

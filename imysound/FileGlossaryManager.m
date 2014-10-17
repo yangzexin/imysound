@@ -28,7 +28,7 @@
 {
     self = [super init];
     
-    self.keyValue = [[SimpleFileKeyValueManager alloc] initWithFilePath:[NSString stringWithFormat:@"%@.glossary", srtFilePath]];
+    self.keyValue = [[[SimpleFileKeyValueManager alloc] initWithFilePath:[NSString stringWithFormat:@"%@.glossary", srtFilePath]] autorelease];
     
     return self;
 }

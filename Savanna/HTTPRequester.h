@@ -52,7 +52,7 @@
 
 @property(nonatomic, copy)NSString *urlString;
 
-+ (HTTPRequester *)newHTTPRequester;
++ (HTTPRequester *)HTTPRequester;
 - (void)request;
 - (void)cancel;
 

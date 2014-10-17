@@ -70,7 +70,7 @@
     }else{
         NSString *urlString = [[LuaHelper sharedInstance] invokeMethodWithName:@"dictionaryURLForWord" 
                                                                     paramValue:str];
-        self.httpRequester = [HTTPRequester newHTTPRequester];
+        self.httpRequester = [HTTPRequester HTTPRequester];
         self.httpRequester.urlString = urlString;
         self.httpRequester.delegate = self;
         [self.httpRequester request];

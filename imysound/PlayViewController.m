@@ -76,7 +76,7 @@ NSString *kPlayQueueDidPlayCompletely = @"kPlayQueueDidPlayCompletely";
 + (id)sharedInstance
 {
     static PlayViewController *instance = nil;
-    @synchronized(instance){
+    @synchronized(self){
         if(instance == nil){
             instance = [[PlayViewController alloc] init];
         }
