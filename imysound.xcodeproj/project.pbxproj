@@ -1034,10 +1034,12 @@
 		67C32C3B1599DD3D000E5533 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "imysound/imysound-Prefix.pch";
 				INFOPLIST_FILE = "imysound/imysound-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "298763D3-85F4-4BC0-9F3D-0CC714844FD5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1049,6 +1051,7 @@
 				GCC_PREFIX_HEADER = "imysound/imysound-Prefix.pch";
 				INFOPLIST_FILE = "imysound/imysound-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "298763D3-85F4-4BC0-9F3D-0CC714844FD5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

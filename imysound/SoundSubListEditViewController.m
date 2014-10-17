@@ -12,8 +12,9 @@
 #import "SoundSubEditViewController.h"
 #import "CommonUtils.h"
 #import "YXInputDialog.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface SoundSubListEditViewController ()
+@interface SoundSubListEditViewController () <UIAlertViewDelegate>
 
 @property(nonatomic, copy)NSString *soundFilePath;
 @property(nonatomic, retain)NSMutableArray *soundSubList;
@@ -63,12 +64,18 @@
     titleLabel.font = [UIFont boldSystemFontOfSize:16.0f];
     titleLabel.text = [self.soundFilePath lastPathComponent];
     titleLabel.frame = CGRectMake(10, 0, headerView.frame.size.width - 20, headerView.frame.size.height);
+    titleLabel.userInteractionEnabled = YES;
+    [titleLabel addGestureRecognizer:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_soundTitleTapped:)] autorelease]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    [self _loadSubs];
+}
+
+- (void)_loadSubs
+{
     NSArray *existSoundSubList = [[SoundSubManager sharedManager] subListForIdentifier:self.soundFilePath];
     if(existSoundSubList){
         self.soundSubList = [NSMutableArray arrayWithArray:existSoundSubList];
@@ -84,6 +91,86 @@
 }
 
 #pragma mark - events
+- (void)_soundTitleTapped:(id)gr
+{
+    UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:@"Generate subs from lyrics?"
+                                                         message:@""
+                                                        delegate:self
+                                               cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+                                               otherButtonTitles:NSLocalizedString(@"OK", nil), nil] autorelease];
+    [alertView show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex != 0) {
+        [self _generateSubsFromLyrics];
+    }
+}
+
+- (void)_generateSubsFromLyrics
+{
+    AVURLAsset *asset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:self.soundFilePath] options:nil];
+    NSString *lyrics = asset.lyrics;
+    
+    NSArray *prefixs = @[@"Slow dialogue:", @"Explanations:", @"Fast dialogue:"];
+    
+    NSMutableArray *findedPrefixs = [NSMutableArray array];
+    NSMutableArray *findedPrefixTimes = [NSMutableArray array];
+    
+    for (NSString *prefix in prefixs) {
+        double time = [self _findTimeWithPrefix:prefix lyrics:lyrics];
+        if (time != 0.0f) {
+            [findedPrefixs addObject:[prefix substringToIndex:prefix.length - 1]];
+            [findedPrefixTimes addObject:@(time)];
+        }
+    }
+    
+    NSMutableArray *soundSubs = [NSMutableArray array];
+    for (NSInteger i = 0; i < findedPrefixs.count; ++i) {
+        NSString *prefix = [findedPrefixs objectAtIndex:i];
+        double fromTime = [[findedPrefixTimes objectAtIndex:i] doubleValue];
+        double toTime = (i + 1) == findedPrefixTimes.count ? (asset.duration.value / asset.duration.timescale) : [[findedPrefixTimes objectAtIndex:i + 1] doubleValue];
+        if (fromTime < toTime) {
+            NSLog(@"%@, %f-%f", prefix, fromTime, toTime);
+            SoundSub *sub = [[[SoundSub alloc] init] autorelease];
+            sub.title = prefix;
+            sub.beginTime = fromTime;
+            sub.endTime = toTime;
+            
+            [soundSubs addObject:sub];
+        }
+    }
+    
+    [[SoundSubManager sharedManager] setSubListWithArray:soundSubs forIdentifier:self.soundFilePath];
+    [self _loadSubs];
+}
+
+- (double)_findTimeWithPrefix:(NSString *)prefix lyrics:(NSString *)lyrics
+{
+    double time = 0;
+    
+    NSRange range = [lyrics rangeOfString:prefix];
+    if (range.location != NSNotFound) {
+        NSRange newLineRange = [lyrics rangeOfString:@"\n" options:0 range:NSMakeRange(range.location + range.length, lyrics.length - (range.location + range.length))];
+        if (newLineRange.location != NSNotFound) {
+            NSString *timeString = [lyrics substringWithRange:NSMakeRange(range.location + range.length, newLineRange.location - (range.location + range.length))];
+            timeString = [timeString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            NSArray *timeAttrs = [timeString componentsSeparatedByString:@":"];
+            for (NSInteger timeAttrIndex = 0; timeAttrIndex < timeAttrs.count; ++timeAttrIndex) {
+                NSInteger base = 1;
+                for (NSInteger i = timeAttrs.count - 1; i > timeAttrIndex; --i) {
+                    base *= 60;
+                }
+                
+                time += base * [[timeAttrs objectAtIndex:timeAttrIndex] integerValue];
+            }
+        }
+    }
+    
+    return time;
+}
+
 - (void)onEditBtnTapped:(UIBarButtonItem *)editBtn
 {
     [self.tableView setEditing:!self.tableView.editing animated:YES];

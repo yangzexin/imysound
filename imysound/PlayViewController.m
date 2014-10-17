@@ -105,17 +105,17 @@ NSString *kPlayQueueDidPlayCompletely = @"kPlayQueueDidPlayCompletely";
     
     self.playerControlView = [[[PlayerControlView alloc] init] autorelease];
     [self.view addSubview:self.playerControlView];
-    CGFloat tmpY = self.view.bounds.size.height - self.navigationController.navigationBar.frame.size.height - 44.0f;
-    self.playerControlView.frame = CGRectMake(0, tmpY, self.view.bounds.size.width, 44.0f);
+    self.playerControlView.frame = CGRectMake(0, self.view.bounds.size.height - 44, self.view.bounds.size.width, 44.0f);
     self.playerControlView.delegate = self;
+    self.playerControlView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     
     self.tableView = [[[UITableView alloc] init] autorelease];
     [self.view addSubview:self.tableView];
-    tmpY = self.playerStatusView.frame.origin.y + self.playerStatusView.frame.size.height;
     self.tableView.frame = CGRectMake(0, 
-                                      tmpY, 
+                                      self.playerStatusView.frame.size.height,
                                       self.view.bounds.size.width, 
-                                      self.playerControlView.frame.origin.y - tmpY);
+                                      self.view.frame.size.height - self.playerControlView.frame.size.height - self.playerStatusView.frame.size.height);
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     

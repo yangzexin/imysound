@@ -105,9 +105,10 @@
     [self.view addSubview:self.playerControlView];
     self.playerControlView.delegate = self;
     self.playerControlView.frame = CGRectMake(0, 
-                                              self.view.bounds.size.height - self.navigationController.navigationBar.frame.size.height - 44, 
+                                              self.view.bounds.size.height - 44,
                                               self.view.frame.size.width, 
                                               44);
+    self.playerControlView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
     [self.playerControlView hideNextButton:YES];
     [self.playerControlView hidePreviousButton:YES];
     

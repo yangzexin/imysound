@@ -85,12 +85,12 @@
 
 - (void)onPreviousButtonItemTapped
 {
-    [Player sharedInstance].currentTime -= 2.0f;
+    [Player sharedInstance].currentTime -= 5.0f;
 }
 
 - (void)onNextButtonItemTapped
 {
-    [Player sharedInstance].currentTime += 2.0f;
+    [Player sharedInstance].currentTime += 5.0f;
 }
 
 - (void)onPlayControlButtonItemTapped
