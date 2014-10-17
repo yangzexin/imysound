@@ -244,10 +244,10 @@
 #pragma mark - PopOutTableViewDelegate
 - (BOOL)popOutTableView:(PopOutTableView *)tableView shouldShowPopOutCellAtIndex:(NSInteger)index
 {
-    NSString *soundFilePath = [self soundFileAtIndex:index];
+    NSString *filePath = [self soundFileAtIndex:index];
     
-    if(![[soundFilePath lowercaseString] hasSuffix:@".mp3"]){
-        ViewTextViewController *vc = [[ViewTextViewController alloc] initWithTextFilePath:soundFilePath];
+    if(![[filePath lowercaseString] hasSuffix:@".mp3"]){
+        ViewTextViewController *vc = [[ViewTextViewController alloc] initWithTextFilePath:filePath];
         vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
         [vc release];
