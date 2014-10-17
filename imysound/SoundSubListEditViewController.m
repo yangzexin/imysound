@@ -153,6 +153,9 @@
     NSRange range = [lyrics rangeOfString:prefix];
     if (range.location != NSNotFound) {
         NSRange newLineRange = [lyrics rangeOfString:@"\n" options:0 range:NSMakeRange(range.location + range.length, lyrics.length - (range.location + range.length))];
+        if (newLineRange.location == NSNotFound) {
+            newLineRange = [lyrics rangeOfString:@"\r" options:0 range:NSMakeRange(range.location + range.length, lyrics.length - (range.location + range.length))];
+        }
         if (newLineRange.location != NSNotFound) {
             NSString *timeString = [lyrics substringWithRange:NSMakeRange(range.location + range.length, newLineRange.location - (range.location + range.length))];
             timeString = [timeString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];

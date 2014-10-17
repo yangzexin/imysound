@@ -119,7 +119,6 @@
 		CF788A2315B01FAC00188B7F /* TextBookmarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF788A2215B01FAC00188B7F /* TextBookmarkViewController.m */; };
 		CF81BBF915AD261100A05E67 /* PlayerStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF81BBF815AD261100A05E67 /* PlayerStatusView.m */; };
 		CF81BC0015AD339100A05E67 /* PlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF81BBFF15AD339100A05E67 /* PlayerControlView.m */; };
-		CF81BC0F15AD707200A05E67 /* SoundSubPlayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF81BC0E15AD707200A05E67 /* SoundSubPlayListViewController.m */; };
 		CF8AA0DA15B5039400738582 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8AA0D915B5039400738582 /* AudioToolbox.framework */; };
 		CFC2365C15B94A19001BFD88 /* HexMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC2365B15B94A19001BFD88 /* HexMaker.m */; };
 /* End PBXBuildFile section */
@@ -338,8 +337,6 @@
 		CF81BBF815AD261100A05E67 /* PlayerStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerStatusView.m; sourceTree = "<group>"; };
 		CF81BBFE15AD339100A05E67 /* PlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerControlView.h; sourceTree = "<group>"; };
 		CF81BBFF15AD339100A05E67 /* PlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerControlView.m; sourceTree = "<group>"; };
-		CF81BC0D15AD707200A05E67 /* SoundSubPlayListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundSubPlayListViewController.h; sourceTree = "<group>"; };
-		CF81BC0E15AD707200A05E67 /* SoundSubPlayListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundSubPlayListViewController.m; sourceTree = "<group>"; };
 		CF8AA0D915B5039400738582 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CFC2365A15B94A19001BFD88 /* HexMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexMaker.h; sourceTree = "<group>"; };
 		CFC2365B15B94A19001BFD88 /* HexMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexMaker.m; sourceTree = "<group>"; };
@@ -598,8 +595,6 @@
 				678586C115AC68DE00B096C1 /* SoundSubListEditViewController.m */,
 				678586C315AC6F3100B096C1 /* SoundSubEditViewController.h */,
 				678586C415AC6F3100B096C1 /* SoundSubEditViewController.m */,
-				CF81BC0D15AD707200A05E67 /* SoundSubPlayListViewController.h */,
-				CF81BC0E15AD707200A05E67 /* SoundSubPlayListViewController.m */,
 				CF6930FA15AE78A7005352AB /* PlayViewController.h */,
 				CF6930FB15AE78A7005352AB /* PlayViewController.m */,
 				CF0F95B515AFC283003B094C /* ViewTextViewController.h */,
@@ -889,7 +884,6 @@
 				6785872915AC775400B096C1 /* KeyValueManagerFactory.m in Sources */,
 				CF81BBF915AD261100A05E67 /* PlayerStatusView.m in Sources */,
 				CF81BC0015AD339100A05E67 /* PlayerControlView.m in Sources */,
-				CF81BC0F15AD707200A05E67 /* SoundSubPlayListViewController.m in Sources */,
 				676AB66C15ADBCC3004444C6 /* PlayItem.m in Sources */,
 				676AB67015ADBDA0004444C6 /* PlayQueue.m in Sources */,
 				676AB67415ADBF03004444C6 /* PlayQueueControlNormal.m in Sources */,

@@ -53,10 +53,6 @@
     self.titleLabel.backgroundColor = [UIColor clearColor];
     self.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
     self.titleLabel.text = _customTitle;
-    self.titleLabel.layer.shadowRadius = 0.5f;
-    self.titleLabel.layer.shadowOpacity = 1.0f;
-    self.titleLabel.layer.shadowOffset = CGSizeMake(0, -0.5f);
-    self.titleLabel.layer.shadowColor = [UIColor blackColor].CGColor;
     self.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.titleLabel.frame = CGRectMake(0, 0, [_customTitle sizeWithFont:self.titleLabel.font].width, 
                                        self.titleLabel.font.lineHeight);

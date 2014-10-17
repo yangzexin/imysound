@@ -10,11 +10,14 @@
 #import "PopOutTableView.h"
 #import "CommonUtils.h"
 #import "SoundSubListEditViewController.h"
-#import "SoundSubPlayListViewController.h"
 #import "ViewTextViewController.h"
 #import "Player.h"
 #import "PlayViewController.h"
 #import "UITools.h"
+#import "PlayItem.h"
+#import "SoundSub.h"
+#import "PlayQueue.h"
+#import "SoundSubManager.h"
 
 @interface SoundListViewController () <PopOutTableViewDelegate>
 
@@ -198,10 +201,22 @@
 - (void)onViewBtnTapped
 {
     NSString *soundFilePath = [self soundFileAtIndex:self.tableView.selectedCellIndex];
-    SoundSubPlayListViewController *vc = [[SoundSubPlayListViewController alloc] initWithSoundFilePath:soundFilePath];
+    
+    NSMutableArray *playItemList = [NSMutableArray array];
+    NSArray *soundSubList = [[SoundSubManager sharedManager] subListForIdentifier:soundFilePath];
+    for(SoundSub *sub in soundSubList){
+        PlayItem *item = [[[PlayItem alloc] init] autorelease];
+        item.soundFilePath = soundFilePath;
+        item.beginTime = sub.beginTime;
+        item.endTime = sub.endTime;
+        item.title = sub.title;
+        [playItemList addObject:item];
+    }
+    PlayQueue *queue = [[[PlayQueue alloc] initWithPlayItemList:playItemList playAtIndex:0] autorelease];
+    PlayViewController *vc = [PlayViewController sharedInstance];
     vc.hidesBottomBarWhenPushed = YES;
+    [vc playWithPlayQueue:queue];
     [self.navigationController pushViewController:vc animated:YES];
-    [vc release];
 }
 
 - (void)onEditBtnItemTapped:(UIBarButtonItem *)editBtnItem
@@ -274,7 +289,8 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
                                       reuseIdentifier:identifier] autorelease];
         cell.textLabel.adjustsFontSizeToFitWidth = YES;
-        cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
+        cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
+        cell.textLabel.numberOfLines = 0;
     }
     
     NSString *soundFilePath = [self.soundFileList objectAtIndex:index];
@@ -288,7 +304,7 @@
 
 - (CGFloat)popOutTableView:(PopOutTableView *)popOutTableView heightForRowAtIndex:(NSInteger)index
 {
-    return 60.0f;
+    return 80.0f;
 }
 
 @end
