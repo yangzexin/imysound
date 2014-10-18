@@ -14,6 +14,7 @@
 #import "CommonUtils.h"
 #import "SoundSub.h"
 #import "SoundSubManager.h"
+#import "SFiOSKit.h"
 
 #define ALERT_TAG_INPUT 1001
 #define ALERT_TAG_EXIT_CONFIRM 1002
@@ -112,13 +113,18 @@
     [self.playerControlView hideNextButton:YES];
     [self.playerControlView hidePreviousButton:YES];
     
-    UIButton *previousBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIImage *roundImage = [UIImage roundImageWithBackgroundColor:[UIColor darkGrayColor] borderColor:[UIColor clearColor] size:CGSizeMake(15, 15) cornerRadius:5];
+    roundImage = [roundImage stretchableImageWithLeftCapWidth:7 topCapHeight:7];
+    
+    UIButton *previousBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:previousBtn];
     previousBtn.frame = CGRectMake(10, 70, (self.view.bounds.size.width - 30) / 2, 40);
     [previousBtn setTitle:@"< 2s" forState:UIControlStateNormal];
     [previousBtn addTarget:self action:@selector(onPreviousBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+    [previousBtn setBackgroundImage:roundImage forState:UIControlStateNormal];
+    previousBtn.titleLabel.font = [UIFont systemFontOfSize:17.0f];
     
-    UIButton *nextBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *nextBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:nextBtn];
     nextBtn.frame = CGRectMake(previousBtn.frame.origin.x + previousBtn.frame.size.width + 10, 
                                previousBtn.frame.origin.y, 
@@ -126,14 +132,18 @@
                                previousBtn.frame.size.height);
     [nextBtn setTitle:@"> 2s" forState:UIControlStateNormal];
     [nextBtn addTarget:self action:@selector(onNextBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+    [nextBtn setBackgroundImage:roundImage forState:UIControlStateNormal];
+    nextBtn.titleLabel.font = [UIFont systemFontOfSize:17.0f];
     
-    self.markBeginTimeBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.markBeginTimeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.markBeginTimeBtn];
     self.markBeginTimeBtn.frame = CGRectMake(10, 120, (self.view.bounds.size.width - 30) / 2, 40);
     [self.markBeginTimeBtn setTitle:NSLocalizedString(@"mark_begin_time", nil) forState:UIControlStateNormal];
     [self.markBeginTimeBtn addTarget:self action:@selector(onMarkBeginTimeBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self.markBeginTimeBtn setBackgroundImage:roundImage forState:UIControlStateNormal];
+    self.markBeginTimeBtn.titleLabel.font = [UIFont systemFontOfSize:17.0f];
     
-    self.markEndTimeBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.markEndTimeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.markEndTimeBtn];
     self.markEndTimeBtn.frame = CGRectMake(self.markBeginTimeBtn.frame.origin.x + self.markBeginTimeBtn.frame.size.width + 10, 
                                            self.markBeginTimeBtn.frame.origin.y, 
@@ -141,12 +151,16 @@
                                            self.markBeginTimeBtn.frame.size.height);
     [self.markEndTimeBtn setTitle:NSLocalizedString(@"mark_end_time", nil) forState:UIControlStateNormal];
     [self.markEndTimeBtn addTarget:self action:@selector(onMarkEndTimeBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self.markEndTimeBtn setBackgroundImage:roundImage forState:UIControlStateNormal];
+    self.markBeginTimeBtn.titleLabel.font = [UIFont systemFontOfSize:17.0f];
     
-    UIButton *saveBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:saveBtn];
     saveBtn.frame = CGRectMake(60, 220, 200, 40);
     [saveBtn setTitle:NSLocalizedString(@"save_sound_sub", nil) forState:UIControlStateNormal];
     [saveBtn addTarget:self action:@selector(onSaveBtnTapped) forControlEvents:UIControlEventTouchUpInside];
+    [saveBtn setBackgroundImage:roundImage forState:UIControlStateNormal];
+    saveBtn.titleLabel.font = [UIFont systemFontOfSize:17.0f];
     
     [[NSNotificationCenter defaultCenter] addObserver:self 
                                              selector:@selector(onPlayerDidStartPlayNotification:) 
