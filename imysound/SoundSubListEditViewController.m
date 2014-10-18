@@ -271,7 +271,7 @@
         if(!cell){
             cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle 
                                            reuseIdentifier:cellIdentifierSoundSub] autorelease];
-            cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
+            cell.textLabel.font = [UIFont systemFontOfSize:17.0f];
             cell.textLabel.adjustsFontSizeToFitWidth = YES;
         }
         SoundSub *sub = [self.soundSubList objectAtIndex:indexPath.row];

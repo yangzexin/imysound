@@ -90,7 +90,7 @@
 //    [viewBtn setTitle:NSLocalizedString(@"Play", nil) forState:UIControlStateNormal];
 //    [viewBtn addTarget:self action:@selector(onViewBtnTapped) forControlEvents:UIControlEventTouchUpInside];
 //    viewBtn.frame = CGRectMake(10, 5, (self.tableView.frame.size.width - 30) / 2, 40);
-//    [viewBtn setBackgroundImage:[UITools createPureColorImageWithColor:[UIColor darkGrayColor] size:viewBtn.frame.size] 
+//    [viewBtn setBackgroundImage:[UITools createPureColorImageWithColor:[UIColor grayColor] size:viewBtn.frame.size] 
 //                       forState:UIControlStateNormal];
 //    viewBtn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
 //    
@@ -102,7 +102,7 @@
 //                               5, 
 //                               (self.tableView.frame.size.width - 30) / 2, 
 //                               40);
-//    [editBtn setBackgroundImage:[UITools createPureColorImageWithColor:[UIColor orangeColor] size:editBtn.frame.size] 
+//    [editBtn setBackgroundImage:[UITools createPureColorImageWithColor:[UIColor grayColor] size:editBtn.frame.size] 
 //                       forState:UIControlStateNormal];
 //    editBtn.titleLabel.font = [UIFont systemFontOfSize:14.0f];
     
@@ -145,6 +145,12 @@
                                              selector:@selector(onPlayerDidStopNotification:) 
                                                  name:kPlayQueueDidPlayCompletely 
                                                object:nil];
+    
+    UIRefreshControl *refreshControl = [[[UIRefreshControl alloc] init] autorelease];
+    [refreshControl addTarget:self action:@selector(_dropViewDidBeginRefreshing:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+    
+    [self reloadSoundList];
 }
 
 - (void)viewDidUnload
@@ -155,7 +161,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self reloadSoundList];
 }
 
 #pragma mark - private methods
@@ -224,6 +229,14 @@
 //    } else {
 //        
 //    }
+}
+
+- (void)_dropViewDidBeginRefreshing:(UIRefreshControl *)refreshControl
+{
+    [self reloadSoundList];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.50f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [refreshControl endRefreshing];
+    });
 }
 
 - (void)onEditBtnItemTapped:(UIBarButtonItem *)editBtnItem
@@ -314,7 +327,7 @@
     bottomLine.hidden = (index == popOutTableView.selectedCellIndex) || (index == [self numberOfRowsInPopOutTableView:popOutTableView] - 1);
     cell.textLabel.text = [NSString stringWithFormat:@"%02d %@", index + 1, soundFilePath];
     cell.textLabel.textColor = [[soundFilePath lowercaseString] hasSuffix:@".mp3"] ? 
-        [UIColor blackColor] : [UIColor orangeColor];
+        [UIColor blackColor] : [UIColor grayColor];
     
     return cell;
 }
@@ -389,9 +402,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *soundFilePath = [self.soundFileList objectAtIndex:indexPath.row];
-    NSString *text = [NSString stringWithFormat:@"%02d %@", indexPath.row + 1, soundFilePath];
+    NSString *text = [NSString stringWithFormat:@"%@", soundFilePath];
     
-    return [text compatibleSizeWithFont:[UIFont systemFontOfSize:15.0f] constrainedToSize:CGSizeMake(tableView.frame.size.width - 37, MAXFLOAT)].height + 40;
+    return [text compatibleSizeWithFont:[UIFont boldSystemFontOfSize:17.0f] constrainedToSize:CGSizeMake(tableView.frame.size.width - 37, MAXFLOAT)].height + 40;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -403,7 +416,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                        reuseIdentifier:identifier] autorelease];
         cell.textLabel.adjustsFontSizeToFitWidth = YES;
-        cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
+        cell.textLabel.font = [UIFont boldSystemFontOfSize:17.0f];
         cell.textLabel.numberOfLines = 0;
         cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
         
@@ -418,8 +431,8 @@
     }
     
     NSString *soundFilePath = [self.soundFileList objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%02d %@", indexPath.row + 1, soundFilePath];
-    cell.textLabel.textColor = [[soundFilePath lowercaseString] hasSuffix:@".mp3"] ? [UIColor blackColor] : [UIColor orangeColor];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", soundFilePath];
+    cell.textLabel.textColor = [[soundFilePath lowercaseString] hasSuffix:@".mp3"] ? [UIColor blackColor] : [UIColor grayColor];
     
     return cell;
 }
