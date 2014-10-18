@@ -47,6 +47,10 @@
 {
     [super loadView];
     
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 7.0f) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
     self.titleLabel = [[[UILabel alloc] init] autorelease];
     self.titleLabel.textAlignment = UITextAlignmentCenter;
     self.titleLabel.textColor = [UIColor whiteColor];

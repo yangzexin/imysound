@@ -22,6 +22,8 @@
     
 }
 
+@property (nonatomic, copy) NSString *soundFilePath;
+
 @property(nonatomic, assign)id<NowPlayingViewControllerDelegate> delegate;
 
 @end

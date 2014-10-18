@@ -212,11 +212,15 @@
         item.title = sub.title;
         [playItemList addObject:item];
     }
-    PlayQueue *queue = [[[PlayQueue alloc] initWithPlayItemList:playItemList playAtIndex:0] autorelease];
-    PlayViewController *vc = [PlayViewController sharedInstance];
-    vc.hidesBottomBarWhenPushed = YES;
-    [vc playWithPlayQueue:queue];
-    [self.navigationController pushViewController:vc animated:YES];
+    if (playItemList.count != 0) {
+        PlayQueue *queue = [[[PlayQueue alloc] initWithPlayItemList:playItemList playAtIndex:0] autorelease];
+        PlayViewController *vc = [PlayViewController sharedInstance];
+        vc.hidesBottomBarWhenPushed = YES;
+        [vc playWithPlayQueue:queue];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else {
+        
+    }
 }
 
 - (void)onEditBtnItemTapped:(UIBarButtonItem *)editBtnItem

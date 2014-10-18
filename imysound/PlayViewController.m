@@ -281,6 +281,7 @@ NSString *kPlayQueueDidPlayCompletely = @"kPlayQueueDidPlayCompletely";
     NowPlayingViewController *vc = [[[NowPlayingViewController alloc] init] autorelease];
     vc.title = self.playItem.title;
     vc.delegate = self;
+    vc.soundFilePath = self.playItem.soundFilePath;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

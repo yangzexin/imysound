@@ -38,15 +38,17 @@
     playListNC.tabBarItem.image = [UIImage imageNamed:@"icon_news_list"];
     playListNC.title = NSLocalizedString(@"play_list", nil);
     
-    UITabBarController *tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.window.rootViewController = tabBarController;
-    tabBarController.viewControllers = [NSArray arrayWithObjects:soundListNC, playListNC, nil];
+//    UITabBarController *tabBarController = [[[UITabBarController alloc] init] autorelease];
+//    self.window.rootViewController = tabBarController;
+//    tabBarController.viewControllers = [NSArray arrayWithObjects:soundListNC, playListNC, nil];
+    self.window.rootViewController = soundListNC;
     
     NSString *scriptFilePath = [[NSBundle mainBundle] pathForResource:@"common" ofType:@"lua"];
     [LuaHelper sharedInstance].script = [NSString stringWithContentsOfFile:scriptFilePath 
                                                                   encoding:NSUTF8StringEncoding 
                                                                      error:nil];
 //    NSLog(@"%@", [CodeUtils encodeWithString:@"词典"]);
+//    NSLog(@"%@", [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) lastObject]);
     
     return YES;
 }
