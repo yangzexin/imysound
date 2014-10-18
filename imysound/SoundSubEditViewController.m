@@ -118,7 +118,7 @@
     
     UIButton *previousBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:previousBtn];
-    previousBtn.frame = CGRectMake(10, 70, (self.view.bounds.size.width - 30) / 2, 40);
+    previousBtn.frame = CGRectMake(10, 110, (self.view.bounds.size.width - 30) / 2, 40);
     [previousBtn setTitle:@"< 2s" forState:UIControlStateNormal];
     [previousBtn addTarget:self action:@selector(onPreviousBtnTapped) forControlEvents:UIControlEventTouchUpInside];
     [previousBtn setBackgroundImage:roundImage forState:UIControlStateNormal];
@@ -137,7 +137,7 @@
     
     self.markBeginTimeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:self.markBeginTimeBtn];
-    self.markBeginTimeBtn.frame = CGRectMake(10, 120, (self.view.bounds.size.width - 30) / 2, 40);
+    self.markBeginTimeBtn.frame = CGRectMake(10, 180, (self.view.bounds.size.width - 30) / 2, 40);
     [self.markBeginTimeBtn setTitle:NSLocalizedString(@"mark_begin_time", nil) forState:UIControlStateNormal];
     [self.markBeginTimeBtn addTarget:self action:@selector(onMarkBeginTimeBtnTapped) forControlEvents:UIControlEventTouchUpInside];
     [self.markBeginTimeBtn setBackgroundImage:roundImage forState:UIControlStateNormal];
@@ -156,7 +156,7 @@
     
     UIButton *saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:saveBtn];
-    saveBtn.frame = CGRectMake(60, 220, 200, 40);
+    saveBtn.frame = CGRectMake(60, 280, 200, 40);
     [saveBtn setTitle:NSLocalizedString(@"save_sound_sub", nil) forState:UIControlStateNormal];
     [saveBtn addTarget:self action:@selector(onSaveBtnTapped) forControlEvents:UIControlEventTouchUpInside];
     [saveBtn setBackgroundImage:roundImage forState:UIControlStateNormal];
