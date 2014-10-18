@@ -18,6 +18,12 @@
 		3E2B5FE417111D65004CA16E /* icon_local_list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FE217111D65004CA16E /* icon_local_list@2x.png */; };
 		3E2B5FE817111DC0004CA16E /* icon_news_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FE617111DC0004CA16E /* icon_news_list.png */; };
 		3E2B5FE917111DC0004CA16E /* icon_news_list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FE717111DC0004CA16E /* icon_news_list@2x.png */; };
+		3E434D1619F1F65100A06166 /* libSFFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D0E19F1F61200A06166 /* libSFFoundation.a */; };
+		3E434D1719F1F65100A06166 /* libSFiOSKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1519F1F61600A06166 /* libSFiOSKit.a */; };
+		3E434D1B19F1F6BB00A06166 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1A19F1F6BB00A06166 /* QuartzCore.framework */; };
+		3E434D1D19F1F6C800A06166 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1C19F1F6C800A06166 /* CoreLocation.framework */; };
+		3E434D1F19F1F6D200A06166 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1E19F1F6D200A06166 /* CoreText.framework */; };
+		3E434D2019F1F6D900A06166 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1819F1F6B400A06166 /* MapKit.framework */; };
 		3E50D1DC160C6A8C00BA58C5 /* DialogTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E50D1DB160C6A8C00BA58C5 /* DialogTools.m */; };
 		3E6B6203162BB662004C1BCC /* NowPlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6B6202162BB662004C1BCC /* NowPlayingViewController.m */; };
 		3EDD85C6178267D2008C9E61 /* YXDelayControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD85C1178267D2008C9E61 /* YXDelayControl.m */; };
@@ -123,6 +129,23 @@
 		CFC2365C15B94A19001BFD88 /* HexMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC2365B15B94A19001BFD88 /* HexMaker.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3E434D0D19F1F61200A06166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E434D0919F1F61100A06166 /* SFFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3EC67D611828D10000B6190E;
+			remoteInfo = SFFoundation;
+		};
+		3E434D1419F1F61600A06166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E434D0F19F1F61500A06166 /* SFiOSKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3ED59DB91828D33A002531DD;
+			remoteInfo = SFiOSKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3E055FD917126C640019A6E6 /* FileGlossaryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileGlossaryManager.h; sourceTree = "<group>"; };
 		3E055FDA17126C640019A6E6 /* FileGlossaryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileGlossaryManager.m; sourceTree = "<group>"; };
@@ -140,6 +163,12 @@
 		3E2B5FE217111D65004CA16E /* icon_local_list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_local_list@2x.png"; sourceTree = "<group>"; };
 		3E2B5FE617111DC0004CA16E /* icon_news_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_news_list.png; sourceTree = "<group>"; };
 		3E2B5FE717111DC0004CA16E /* icon_news_list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_news_list@2x.png"; sourceTree = "<group>"; };
+		3E434D0919F1F61100A06166 /* SFFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SFFoundation.xcodeproj; path = ../SFLibraries/SFFoundation/SFFoundation.xcodeproj; sourceTree = "<group>"; };
+		3E434D0F19F1F61500A06166 /* SFiOSKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SFiOSKit.xcodeproj; path = ../SFLibraries/SFiOSKit/SFiOSKit.xcodeproj; sourceTree = "<group>"; };
+		3E434D1819F1F6B400A06166 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3E434D1A19F1F6BB00A06166 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3E434D1C19F1F6C800A06166 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3E434D1E19F1F6D200A06166 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		3E50D1DA160C6A8C00BA58C5 /* DialogTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DialogTools.h; sourceTree = "<group>"; };
 		3E50D1DB160C6A8C00BA58C5 /* DialogTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialogTools.m; sourceTree = "<group>"; };
 		3E6B6201162BB662004C1BCC /* NowPlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowPlayingViewController.h; sourceTree = "<group>"; };
@@ -347,6 +376,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E434D2019F1F6D900A06166 /* MapKit.framework in Frameworks */,
+				3E434D1F19F1F6D200A06166 /* CoreText.framework in Frameworks */,
+				3E434D1D19F1F6C800A06166 /* CoreLocation.framework in Frameworks */,
+				3E434D1B19F1F6BB00A06166 /* QuartzCore.framework in Frameworks */,
+				3E434D1619F1F65100A06166 /* libSFFoundation.a in Frameworks */,
+				3E434D1719F1F65100A06166 /* libSFiOSKit.a in Frameworks */,
 				CF8AA0DA15B5039400738582 /* AudioToolbox.framework in Frameworks */,
 				678586D015AC735700B096C1 /* AVFoundation.framework in Frameworks */,
 				67C32C861599DF69000E5533 /* libsqlite3.dylib in Frameworks */,
@@ -382,6 +417,31 @@
 				3E2B5FE717111DC0004CA16E /* icon_news_list@2x.png */,
 			);
 			name = Resoures;
+			sourceTree = "<group>";
+		};
+		3E434D0819F1F60100A06166 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				3E434D0919F1F61100A06166 /* SFFoundation.xcodeproj */,
+				3E434D0F19F1F61500A06166 /* SFiOSKit.xcodeproj */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		3E434D0A19F1F61100A06166 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E434D0E19F1F61200A06166 /* libSFFoundation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E434D1019F1F61500A06166 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E434D1519F1F61600A06166 /* libSFiOSKit.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		678586B915AC624E00B096C1 /* SoundSubManager */ = {
@@ -527,6 +587,7 @@
 			children = (
 				3E2B5FCC17110838004CA16E /* Default-568h@2x.png */,
 				67C32C2C1599DD3D000E5533 /* imysound */,
+				3E434D0819F1F60100A06166 /* Dependencies */,
 				3E2B5FDA17111879004CA16E /* AddInFrameworks */,
 				67C32C251599DD3D000E5533 /* Frameworks */,
 				67C32C231599DD3D000E5533 /* Products */,
@@ -544,6 +605,10 @@
 		67C32C251599DD3D000E5533 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E434D1E19F1F6D200A06166 /* CoreText.framework */,
+				3E434D1C19F1F6C800A06166 /* CoreLocation.framework */,
+				3E434D1A19F1F6BB00A06166 /* QuartzCore.framework */,
+				3E434D1819F1F6B400A06166 /* MapKit.framework */,
 				67C32C261599DD3D000E5533 /* UIKit.framework */,
 				67C32C281599DD3D000E5533 /* Foundation.framework */,
 				67C32C2A1599DD3D000E5533 /* CoreGraphics.framework */,
@@ -816,12 +881,39 @@
 			mainGroup = 67C32C171599DD3D000E5533;
 			productRefGroup = 67C32C231599DD3D000E5533 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3E434D0A19F1F61100A06166 /* Products */;
+					ProjectRef = 3E434D0919F1F61100A06166 /* SFFoundation.xcodeproj */;
+				},
+				{
+					ProductGroup = 3E434D1019F1F61500A06166 /* Products */;
+					ProjectRef = 3E434D0F19F1F61500A06166 /* SFiOSKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				67C32C211599DD3D000E5533 /* imysound */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3E434D0E19F1F61200A06166 /* libSFFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSFFoundation.a;
+			remoteRef = 3E434D0D19F1F61200A06166 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3E434D1519F1F61600A06166 /* libSFiOSKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSFiOSKit.a;
+			remoteRef = 3E434D1419F1F61600A06166 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		67C32C201599DD3D000E5533 /* Resources */ = {
@@ -1032,8 +1124,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "imysound/imysound-Prefix.pch";
 				INFOPLIST_FILE = "imysound/imysound-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "298763D3-85F4-4BC0-9F3D-0CC714844FD5";
+				USER_HEADER_SEARCH_PATHS = "../SFLibraries/SFiOSKit/** ../SFLibraries/SFFoundation/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1044,8 +1138,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "imysound/imysound-Prefix.pch";
 				INFOPLIST_FILE = "imysound/imysound-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "298763D3-85F4-4BC0-9F3D-0CC714844FD5";
+				USER_HEADER_SEARCH_PATHS = "../SFLibraries/SFiOSKit/** ../SFLibraries/SFFoundation/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

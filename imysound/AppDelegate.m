@@ -11,6 +11,7 @@
 #import "PlayListViewController.h"
 #import "LuaHelper.h"
 #import "CodeUtils.h"
+#import "SFiOSKit.h"
 
 @implementation AppDelegate
 
@@ -29,8 +30,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    UINavigationController *soundListNC = [[[UINavigationController alloc] initWithRootViewController:
-                                            [[[SoundListViewController alloc] init] autorelease]] autorelease];
+    SFGestureBackNavigationController *soundListNC = [[[SFGestureBackNavigationController alloc] initWithRootViewController:
+                                                       [[[SoundListViewController alloc] init] autorelease]] autorelease];
+    soundListNC.leftPanDistance = self.window.frame.size.width;
     soundListNC.tabBarItem.image = [UIImage imageNamed:@"icon_local_list"];
     soundListNC.title = NSLocalizedString(@"sound_list", nil);
     UINavigationController *playListNC = [[[UINavigationController alloc] initWithRootViewController:
