@@ -24,3 +24,5 @@ word_can_not_found = "\"$word\"没有找到该单词";
 error_network = "网络连接错误";
 enter_bookmark_title = "请输入书签名称";
 Dictionary = "词典";
+"This sound don't have any subs" = "该音频还没有分割列表";
+"OK" = "确定";
