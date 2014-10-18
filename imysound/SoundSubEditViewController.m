@@ -89,7 +89,7 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
                                                                              target:self 
                                                                              action:@selector(onDoneBtnTapped)];

@@ -7,6 +7,7 @@
 //
 
 #import "PopOutTableView.h"
+#import "SFiOSKit.h"
 
 @interface PopOutTableView () <UITableViewDelegate, UITableViewDataSource>
 
@@ -50,6 +51,11 @@
     _popOutCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
                                          reuseIdentifier:@"popout"];
     self.popOutCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    SFLineView *bottomLine = [[[SFLineView alloc] initWithFrame:CGRectMake(0, _popOutCell.contentView.frame.size.height - 1, _popOutCell.contentView.frame.size.width, 1)] autorelease];
+    bottomLine.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+    bottomLine.tag = 1001;
+    bottomLine.color = [UIColor colorWithIntegerRed:230 green:230 blue:230];
+    [_popOutCell.contentView addSubview:bottomLine];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     self.tableView.delegate = self;

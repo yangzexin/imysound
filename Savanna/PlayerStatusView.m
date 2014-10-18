@@ -65,8 +65,8 @@
     
     self.bottomLine = [[[UIView alloc] init] autorelease];
     [self addSubview:self.bottomLine];
-    self.bottomLine.backgroundColor = [UIColor blackColor];
-    self.bottomLine.alpha = 0.67f;
+    self.bottomLine.backgroundColor = [UIColor darkGrayColor];
+    self.bottomLine.alpha = 0.80f;
     
     self.positionSilder = [[[UISlider alloc] init] autorelease];
     [self.positionSilder addTarget:self 

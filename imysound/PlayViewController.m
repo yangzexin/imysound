@@ -99,7 +99,6 @@ NSString *kPlayQueueDidPlayCompletely = @"kPlayQueueDidPlayCompletely";
     [super viewDidLoad];
     
     self.playerStatusView = [[[PlayerStatusView alloc] init] autorelease];
-    [self.view addSubview:self.playerStatusView];
     self.playerStatusView.frame = CGRectMake(0, 0, self.view.bounds.size.width, 60.0f);
     self.playerStatusView.delegate = self;
     
@@ -111,11 +110,13 @@ NSString *kPlayQueueDidPlayCompletely = @"kPlayQueueDidPlayCompletely";
     
     self.tableView = [[[UITableView alloc] init] autorelease];
     [self.view addSubview:self.tableView];
+    [self.view addSubview:self.playerStatusView];
     self.tableView.frame = CGRectMake(0, 
-                                      self.playerStatusView.frame.size.height,
+                                      0,
                                       self.view.bounds.size.width, 
-                                      self.view.frame.size.height - self.playerControlView.frame.size.height - self.playerStatusView.frame.size.height);
+                                      self.view.frame.size.height - self.playerControlView.frame.size.height);
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.tableView.contentInset = UIEdgeInsetsMake(self.playerStatusView.frame.size.height, 0, 0, 0);
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     

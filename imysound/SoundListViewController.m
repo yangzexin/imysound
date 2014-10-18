@@ -18,6 +18,7 @@
 #import "SoundSub.h"
 #import "PlayQueue.h"
 #import "SoundSubManager.h"
+#import "SFiOSKit.h"
 
 @interface SoundListViewController () <PopOutTableViewDelegate>
 
@@ -73,6 +74,7 @@
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     self.tableView = [[[PopOutTableView alloc] initWithFrame:self.fullBounds] autorelease];
+    self.tableView.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.tableView];
     self.tableView.delegate = self;
     self.tableView.editable = YES;
@@ -289,16 +291,26 @@
 {
     static NSString *identifier = @"id";
     UITableViewCell *cell = [popOutTableView.tableView dequeueReusableCellWithIdentifier:identifier];
+    SFLineView *bottomLine = nil;
     if(!cell){
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
                                       reuseIdentifier:identifier] autorelease];
         cell.textLabel.adjustsFontSizeToFitWidth = YES;
         cell.textLabel.font = [UIFont systemFontOfSize:15.0f];
         cell.textLabel.numberOfLines = 0;
+        
+        bottomLine = [[[SFLineView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1, cell.contentView.frame.size.width, 1)] autorelease];
+        bottomLine.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+        bottomLine.tag = 1001;
+        bottomLine.color = [UIColor colorWithIntegerRed:230 green:230 blue:230];
+        bottomLine.alignment = SFLineViewAlignmentBottom;
+        [cell.contentView addSubview:bottomLine];
+    } else {
+        bottomLine = (id)[cell.contentView viewWithTag:1001];
     }
     
     NSString *soundFilePath = [self.soundFileList objectAtIndex:index];
-    
+    bottomLine.hidden = (index == popOutTableView.selectedCellIndex) || (index == [self numberOfRowsInPopOutTableView:popOutTableView] - 1);
     cell.textLabel.text = [NSString stringWithFormat:@"%02d %@", index + 1, soundFilePath];
     cell.textLabel.textColor = [[soundFilePath lowercaseString] hasSuffix:@".mp3"] ? 
         [UIColor blackColor] : [UIColor orangeColor];
