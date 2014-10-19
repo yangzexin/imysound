@@ -12,7 +12,7 @@
 #import "CommonUtils.h"
 #import "DictionaryViewController.h"
 
-@interface NowPlayingViewController ()
+@interface NowPlayingViewController () <DictionaryViewControllerDelegate>
 
 @property(nonatomic, retain)UIBarButtonItem *playButtonItem;
 @property(nonatomic, retain)UIBarButtonItem *pauseButtonItem;

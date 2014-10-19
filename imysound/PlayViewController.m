@@ -349,6 +349,7 @@ NSString *kPlayQueueDidPlayCompletely = @"kPlayQueueDidPlayCompletely";
     [player playSoundAtFilePath:playItem.soundFilePath autoPlay:NO];
     player.currentTime = playItem.beginTime;
     [player play];
+    self.title = [[playItem.soundFilePath lastPathComponent] stringByDeletingPathExtension];
 }
 
 - (NSTimeInterval)currentTimeWithPlayItem:(PlayItem *)playItem
@@ -447,31 +448,35 @@ NSString *kPlayQueueDidPlayCompletely = @"kPlayQueueDidPlayCompletely";
 
 - (void)playerControlViewDidControlToPrevious:(PlayerControlView *)playerControlView
 {
-    if(self.isInPreviousTrackDelay){
-        [Player sharedInstance].currentTime = self.currentPlayItem.beginTime;
-        [self resetTrackDelay];
-        return;
-    }
-    PlayItem *previousItem = [self.playQueue goPrevious];
-    if(previousItem){
-        [self playWithPlayItem:previousItem];
-    }else{
-        [[Player sharedInstance] stop];
-        [self onPlayQueueOver];
-        [self onPlayerDidStopNotification:nil];
-    }
+//    if(self.isInPreviousTrackDelay){
+//        [Player sharedInstance].currentTime = self.currentPlayItem.beginTime;
+//        [self resetTrackDelay];
+//        return;
+//    }
+//    PlayItem *previousItem = [self.playQueue goPrevious];
+//    if(previousItem){
+//        [self playWithPlayItem:previousItem];
+//    }else{
+//        [[Player sharedInstance] stop];
+//        [self onPlayQueueOver];
+//        [self onPlayerDidStopNotification:nil];
+//    }
+    
+    [Player sharedInstance].currentTime -= 5.0f;
 }
 
 - (void)playerControlViewDidControlToNext:(PlayerControlView *)playerControlView
 {
-    PlayItem *nextItem = [self.playQueue goNext];
-    if(nextItem){
-        [self playWithPlayItem:nextItem];
-    }else{
-        [[Player sharedInstance] stop];
-        [self onPlayQueueOver];
-        [self onPlayerDidStopNotification:nil];
-    }
+//    PlayItem *nextItem = [self.playQueue goNext];
+//    if(nextItem){
+//        [self playWithPlayItem:nextItem];
+//    }else{
+//        [[Player sharedInstance] stop];
+//        [self onPlayQueueOver];
+//        [self onPlayerDidStopNotification:nil];
+//    }
+    
+    [Player sharedInstance].currentTime += 5.0f;
 }
 
 #pragma mark - UITableViewDelegate & UIITableViewDataSource

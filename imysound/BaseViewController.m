@@ -71,9 +71,11 @@
             [Player sharedInstance].playing ? [[Player sharedInstance] pause] : [[Player sharedInstance] play];
         }
     }else if(event.subtype == UIEventSubtypeRemoteControlNextTrack){
-        [[NSNotificationCenter defaultCenter] postNotificationName:kPlayerPlayNextNotification object:nil];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:kPlayerPlayNextNotification object:nil];
+        
+        [Player sharedInstance].currentTime -= 10.0f;
     }else if(event.subtype == UIEventSubtypeRemoteControlPreviousTrack){
-        [[NSNotificationCenter defaultCenter] postNotificationName:kPlayerPlayPreviousNotification object:nil];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:kPlayerPlayPreviousNotification object:nil];
     }
 }
 

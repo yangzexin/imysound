@@ -418,7 +418,6 @@
         cell.textLabel.adjustsFontSizeToFitWidth = YES;
         cell.textLabel.font = [UIFont boldSystemFontOfSize:17.0f];
         cell.textLabel.numberOfLines = 0;
-        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
         
         bottomLine = [[[SFLineView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1, cell.contentView.frame.size.width, 1)] autorelease];
         bottomLine.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
@@ -432,7 +431,9 @@
     
     NSString *soundFilePath = [self.soundFileList objectAtIndex:indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@", soundFilePath];
-    cell.textLabel.textColor = [[soundFilePath lowercaseString] hasSuffix:@".mp3"] ? [UIColor blackColor] : [UIColor grayColor];
+    BOOL isSound = [[soundFilePath lowercaseString] hasSuffix:@".mp3"];
+    cell.textLabel.textColor = isSound ? [UIColor blackColor] : [UIColor grayColor];
+    cell.accessoryType = isSound ? UITableViewCellAccessoryDetailDisclosureButton : UITableViewCellAccessoryNone;
     
     return cell;
 }
