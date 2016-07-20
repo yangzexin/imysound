@@ -12,4 +12,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "UIViewController+Alert.h"
+    #import <SFFoundation/SFFoundation.h>
+    #import <SFiOSKit/SFiOSKit.h>
 #endif

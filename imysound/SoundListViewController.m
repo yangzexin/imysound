@@ -316,7 +316,7 @@
         bottomLine = [[[SFLineView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1, cell.contentView.frame.size.width, 1)] autorelease];
         bottomLine.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
         bottomLine.tag = 1001;
-        bottomLine.color = [UIColor colorWithIntegerRed:230 green:230 blue:230];
+        bottomLine.color = [UIColor sf_colorWithRed:230 green:230 blue:230];
         bottomLine.alignment = SFLineViewAlignmentBottom;
         [cell.contentView addSubview:bottomLine];
     } else {
@@ -404,7 +404,7 @@
     NSString *soundFilePath = [self.soundFileList objectAtIndex:indexPath.row];
     NSString *text = [NSString stringWithFormat:@"%@", soundFilePath];
     
-    return [text compatibleSizeWithFont:[UIFont boldSystemFontOfSize:17.0f] constrainedToSize:CGSizeMake(tableView.frame.size.width - 37, MAXFLOAT)].height + 40;
+    return [text sf_sizeWithFont:[UIFont boldSystemFontOfSize:17.0f] constrainedToSize:CGSizeMake(tableView.frame.size.width - 37, MAXFLOAT)].height + 40;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

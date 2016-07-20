@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12E13F3FF5C3A6E050B856BB /* libPods-imysound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B44F904DCB5150F7A2D61566 /* libPods-imysound.a */; };
 		3E055FDB17126C640019A6E6 /* FileGlossaryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E055FDA17126C640019A6E6 /* FileGlossaryManager.m */; };
 		3E055FDE17126CFA0019A6E6 /* SimpleFileKeyValueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E055FDD17126CFA0019A6E6 /* SimpleFileKeyValueManager.m */; };
 		3E055FE917128B630019A6E6 /* icon_glossary_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E055FE717128B630019A6E6 /* icon_glossary_list.png */; };
@@ -18,8 +19,6 @@
 		3E2B5FE417111D65004CA16E /* icon_local_list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FE217111D65004CA16E /* icon_local_list@2x.png */; };
 		3E2B5FE817111DC0004CA16E /* icon_news_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FE617111DC0004CA16E /* icon_news_list.png */; };
 		3E2B5FE917111DC0004CA16E /* icon_news_list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FE717111DC0004CA16E /* icon_news_list@2x.png */; };
-		3E434D1619F1F65100A06166 /* libSFFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D0E19F1F61200A06166 /* libSFFoundation.a */; };
-		3E434D1719F1F65100A06166 /* libSFiOSKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1519F1F61600A06166 /* libSFiOSKit.a */; };
 		3E434D1B19F1F6BB00A06166 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1A19F1F6BB00A06166 /* QuartzCore.framework */; };
 		3E434D1D19F1F6C800A06166 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1C19F1F6C800A06166 /* CoreLocation.framework */; };
 		3E434D1F19F1F6D200A06166 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1E19F1F6D200A06166 /* CoreText.framework */; };
@@ -129,23 +128,6 @@
 		CFC2365C15B94A19001BFD88 /* HexMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC2365B15B94A19001BFD88 /* HexMaker.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3E434D0D19F1F61200A06166 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3E434D0919F1F61100A06166 /* SFFoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3EC67D611828D10000B6190E;
-			remoteInfo = SFFoundation;
-		};
-		3E434D1419F1F61600A06166 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3E434D0F19F1F61500A06166 /* SFiOSKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3ED59DB91828D33A002531DD;
-			remoteInfo = SFiOSKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		3E055FD917126C640019A6E6 /* FileGlossaryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileGlossaryManager.h; sourceTree = "<group>"; };
 		3E055FDA17126C640019A6E6 /* FileGlossaryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileGlossaryManager.m; sourceTree = "<group>"; };
@@ -163,8 +145,6 @@
 		3E2B5FE217111D65004CA16E /* icon_local_list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_local_list@2x.png"; sourceTree = "<group>"; };
 		3E2B5FE617111DC0004CA16E /* icon_news_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_news_list.png; sourceTree = "<group>"; };
 		3E2B5FE717111DC0004CA16E /* icon_news_list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_news_list@2x.png"; sourceTree = "<group>"; };
-		3E434D0919F1F61100A06166 /* SFFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SFFoundation.xcodeproj; path = ../SFLibraries/SFFoundation/SFFoundation.xcodeproj; sourceTree = "<group>"; };
-		3E434D0F19F1F61500A06166 /* SFiOSKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SFiOSKit.xcodeproj; path = ../SFLibraries/SFiOSKit/SFiOSKit.xcodeproj; sourceTree = "<group>"; };
 		3E434D1819F1F6B400A06166 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3E434D1A19F1F6BB00A06166 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3E434D1C19F1F6C800A06166 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -268,6 +248,7 @@
 		67C32CD31599E11F000E5533 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		67C32CD51599E1D6000E5533 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		67C32CD61599E1D6000E5533 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		B44F904DCB5150F7A2D61566 /* libPods-imysound.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-imysound.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0F95B515AFC283003B094C /* ViewTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTextViewController.h; sourceTree = "<group>"; };
 		CF0F95B615AFC283003B094C /* ViewTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTextViewController.m; sourceTree = "<group>"; };
 		CF52CA2115B4188D000854CC /* DictionaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryViewController.h; sourceTree = "<group>"; };
@@ -369,6 +350,8 @@
 		CF8AA0D915B5039400738582 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CFC2365A15B94A19001BFD88 /* HexMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexMaker.h; sourceTree = "<group>"; };
 		CFC2365B15B94A19001BFD88 /* HexMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexMaker.m; sourceTree = "<group>"; };
+		D1697F7F91BAFF1DD3BA2096 /* Pods-imysound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imysound.release.xcconfig"; path = "Pods/Target Support Files/Pods-imysound/Pods-imysound.release.xcconfig"; sourceTree = "<group>"; };
+		ED31CD177AFEEB4C1F2E9C0B /* Pods-imysound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imysound.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imysound/Pods-imysound.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -380,8 +363,6 @@
 				3E434D1F19F1F6D200A06166 /* CoreText.framework in Frameworks */,
 				3E434D1D19F1F6C800A06166 /* CoreLocation.framework in Frameworks */,
 				3E434D1B19F1F6BB00A06166 /* QuartzCore.framework in Frameworks */,
-				3E434D1619F1F65100A06166 /* libSFFoundation.a in Frameworks */,
-				3E434D1719F1F65100A06166 /* libSFiOSKit.a in Frameworks */,
 				CF8AA0DA15B5039400738582 /* AudioToolbox.framework in Frameworks */,
 				678586D015AC735700B096C1 /* AVFoundation.framework in Frameworks */,
 				67C32C861599DF69000E5533 /* libsqlite3.dylib in Frameworks */,
@@ -389,6 +370,7 @@
 				67C32C271599DD3D000E5533 /* UIKit.framework in Frameworks */,
 				67C32C291599DD3D000E5533 /* Foundation.framework in Frameworks */,
 				67C32C2B1599DD3D000E5533 /* CoreGraphics.framework in Frameworks */,
+				12E13F3FF5C3A6E050B856BB /* libPods-imysound.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,29 +401,13 @@
 			name = Resoures;
 			sourceTree = "<group>";
 		};
-		3E434D0819F1F60100A06166 /* Dependencies */ = {
+		53754055EF790760405100CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3E434D0919F1F61100A06166 /* SFFoundation.xcodeproj */,
-				3E434D0F19F1F61500A06166 /* SFiOSKit.xcodeproj */,
+				ED31CD177AFEEB4C1F2E9C0B /* Pods-imysound.debug.xcconfig */,
+				D1697F7F91BAFF1DD3BA2096 /* Pods-imysound.release.xcconfig */,
 			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		3E434D0A19F1F61100A06166 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3E434D0E19F1F61200A06166 /* libSFFoundation.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3E434D1019F1F61500A06166 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3E434D1519F1F61600A06166 /* libSFiOSKit.a */,
-			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		678586B915AC624E00B096C1 /* SoundSubManager */ = {
@@ -587,10 +553,10 @@
 			children = (
 				3E2B5FCC17110838004CA16E /* Default-568h@2x.png */,
 				67C32C2C1599DD3D000E5533 /* imysound */,
-				3E434D0819F1F60100A06166 /* Dependencies */,
 				3E2B5FDA17111879004CA16E /* AddInFrameworks */,
 				67C32C251599DD3D000E5533 /* Frameworks */,
 				67C32C231599DD3D000E5533 /* Products */,
+				53754055EF790760405100CD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -612,6 +578,7 @@
 				67C32C261599DD3D000E5533 /* UIKit.framework */,
 				67C32C281599DD3D000E5533 /* Foundation.framework */,
 				67C32C2A1599DD3D000E5533 /* CoreGraphics.framework */,
+				B44F904DCB5150F7A2D61566 /* libPods-imysound.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -849,9 +816,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67C32C3A1599DD3D000E5533 /* Build configuration list for PBXNativeTarget "imysound" */;
 			buildPhases = (
+				49CAA17E7BC1364776219781 /* Check Pods Manifest.lock */,
 				67C32C1E1599DD3D000E5533 /* Sources */,
 				67C32C1F1599DD3D000E5533 /* Frameworks */,
 				67C32C201599DD3D000E5533 /* Resources */,
+				F95EE1F1BBED5A88AE092AAE /* Embed Pods Frameworks */,
+				17C63363AF2B15F07B26D1F7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -881,39 +851,12 @@
 			mainGroup = 67C32C171599DD3D000E5533;
 			productRefGroup = 67C32C231599DD3D000E5533 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3E434D0A19F1F61100A06166 /* Products */;
-					ProjectRef = 3E434D0919F1F61100A06166 /* SFFoundation.xcodeproj */;
-				},
-				{
-					ProductGroup = 3E434D1019F1F61500A06166 /* Products */;
-					ProjectRef = 3E434D0F19F1F61500A06166 /* SFiOSKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				67C32C211599DD3D000E5533 /* imysound */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3E434D0E19F1F61200A06166 /* libSFFoundation.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSFFoundation.a;
-			remoteRef = 3E434D0D19F1F61200A06166 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3E434D1519F1F61600A06166 /* libSFiOSKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSFiOSKit.a;
-			remoteRef = 3E434D1419F1F61600A06166 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		67C32C201599DD3D000E5533 /* Resources */ = {
@@ -934,6 +877,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17C63363AF2B15F07B26D1F7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imysound/Pods-imysound-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49CAA17E7BC1364776219781 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F95EE1F1BBED5A88AE092AAE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imysound/Pods-imysound-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67C32C1E1599DD3D000E5533 /* Sources */ = {
@@ -1119,29 +1110,41 @@
 		};
 		67C32C3B1599DD3D000E5533 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED31CD177AFEEB4C1F2E9C0B /* Pods-imysound.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "imysound/imysound-Prefix.pch";
 				INFOPLIST_FILE = "imysound/imysound-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "298763D3-85F4-4BC0-9F3D-0CC714844FD5";
-				USER_HEADER_SEARCH_PATHS = "../SFLibraries/SFiOSKit/** ../SFLibraries/SFFoundation/**";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		67C32C3C1599DD3D000E5533 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1697F7F91BAFF1DD3BA2096 /* Pods-imysound.release.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "imysound/imysound-Prefix.pch";
 				INFOPLIST_FILE = "imysound/imysound-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "298763D3-85F4-4BC0-9F3D-0CC714844FD5";
-				USER_HEADER_SEARCH_PATHS = "../SFLibraries/SFiOSKit/** ../SFLibraries/SFFoundation/**";
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

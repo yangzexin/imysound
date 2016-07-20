@@ -1,0 +1,25 @@
+PODS:
+  - SFFoundation (1.0.0):
+    - SFFoundation/ARC (= 1.0.0)
+    - SFFoundation/MRC (= 1.0.0)
+  - SFFoundation/ARC (1.0.0):
+    - SFFoundation/MRC
+  - SFFoundation/MRC (1.0.0)
+  - SFiOSKit (1.0.0):
+    - SFFoundation
+
+DEPENDENCIES:
+  - SFFoundation (from `../SFLibraries`)
+  - SFiOSKit (from `../SFLibraries`)
+
+EXTERNAL SOURCES:
+  SFFoundation:
+    :path: ../SFLibraries
+  SFiOSKit:
+    :path: ../SFLibraries
+
+SPEC CHECKSUMS:
+  SFFoundation: aff55b3de1a7f52e323f7d59163830755bafdf12
+  SFiOSKit: 36515035c50b92fd8050350864e8a37e9ac55116
+
+COCOAPODS: 0.39.0
