@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'imysound' do
-    pod 'SFFoundation', :path => '../SFLibraries'
-    pod 'SFiOSKit', :path => '../SFLibraries'
+    pod 'SFFoundation', :git => 'https://github.com/yangzexin/SFLibraries.git'
+    pod 'SFiOSKit', :git => 'https://github.com/yangzexin/SFLibraries.git'
 end
 
