@@ -14,7 +14,6 @@
 #import "CommonUtils.h"
 #import "SoundSub.h"
 #import "SoundSubManager.h"
-#import "SFiOSKit.h"
 
 #define ALERT_TAG_INPUT 1001
 #define ALERT_TAG_EXIT_CONFIRM 1002
@@ -89,7 +88,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+//    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone 
                                                                              target:self 
@@ -106,14 +105,19 @@
     [self.view addSubview:self.playerControlView];
     self.playerControlView.delegate = self;
     self.playerControlView.frame = CGRectMake(0, 
-                                              self.view.bounds.size.height - 44,
+                                              self.view.bounds.size.height - 104,
                                               self.view.frame.size.width, 
-                                              44);
+                                              104);
     self.playerControlView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
     [self.playerControlView hideNextButton:YES];
     [self.playerControlView hidePreviousButton:YES];
     
-    UIImage *roundImage = [UIImage roundImageWithBackgroundColor:[UIColor darkGrayColor] borderColor:[UIColor clearColor] size:CGSizeMake(15, 15) cornerRadius:5];
+    SFRoundImageOptions *options = [SFRoundImageOptions options];
+    options.backgroundColor = [UIColor darkGrayColor];
+    options.borderColor = [UIColor clearColor];
+    options.size = CGSizeMake(15, 15);
+    options.cornerRadius = 5;
+    UIImage *roundImage = [UIImage sf_roundImageWithOptions:options];
     roundImage = [roundImage stretchableImageWithLeftCapWidth:7 topCapHeight:7];
     
     UIButton *previousBtn = [UIButton buttonWithType:UIButtonTypeCustom];

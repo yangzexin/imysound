@@ -52,7 +52,7 @@
                                                                         target:self action:@selector(onNextButtonItemTapped)];
     
     self.toolbar = [[[UIToolbar alloc] init] autorelease];
-    self.toolbar.frame = CGRectMake(0, CGRectGetHeight(self.view.frame) - 44.0f, CGRectGetWidth(self.view.frame), 44.0f);
+    self.toolbar.frame = CGRectMake(0, CGRectGetHeight(self.view.frame) - 104.0f, CGRectGetWidth(self.view.frame), 104.0f);
     self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     self.toolbar.barStyle = UIBarStyleBlack;
     [self.view addSubview:self.toolbar];
@@ -78,7 +78,8 @@
     [self configureDictionaryMenuItem];
     
     self.toolbar.items = [Player sharedInstance].playing ? [self toolbarItemsForPlaying] : [self toolbarItemsForPaused];
-    self.textView.text = [self _lyrics];
+    NSString *lyrics = [self _lyrics];
+    self.textView.text = lyrics == nil ? @"" : lyrics;
 }
 
 - (NSString *)_lyrics

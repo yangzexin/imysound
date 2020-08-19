@@ -7,7 +7,6 @@
 //
 
 #import "PopOutTableView.h"
-#import "SFiOSKit.h"
 
 @interface PopOutTableView () <UITableViewDelegate, UITableViewDataSource>
 

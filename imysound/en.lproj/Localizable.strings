@@ -1,5 +1,5 @@
-sound_list = "Sound List";
-play_list = "Play List";
+sound_list = "Sounds";
+play_list = "Playlist";
 edit_sound_sub = "Edit Subs";
 add_sound_sub = "Add Sub";
 mark_begin_time = "Mark Begin";

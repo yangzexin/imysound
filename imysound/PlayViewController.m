@@ -104,7 +104,7 @@ NSString *kPlayQueueDidPlayCompletely = @"kPlayQueueDidPlayCompletely";
     
     self.playerControlView = [[[PlayerControlView alloc] init] autorelease];
     [self.view addSubview:self.playerControlView];
-    self.playerControlView.frame = CGRectMake(0, self.view.bounds.size.height - 44, self.view.bounds.size.width, 44.0f);
+    self.playerControlView.frame = CGRectMake(0, self.view.bounds.size.height - 104, self.view.bounds.size.width, 104.0f);
     self.playerControlView.delegate = self;
     self.playerControlView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     

@@ -82,20 +82,17 @@
 #pragma mark - events
 - (void)onAddBookmarkBtnTapped
 {
-    UIAlertView *alertView = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"enter_bookmark_title", nil)
-                                                        message:@"\n" 
-                                                       delegate:self 
-                                              cancelButtonTitle:NSLocalizedString(@"Cancel", nil) 
-                                              otherButtonTitles:NSLocalizedString(@"OK", nil), nil] autorelease];
-    UITextField *textField = [[[UITextField alloc] initWithFrame:CGRectMake(15, 43, 252, 30)] autorelease];
-    [alertView addSubview:textField];
-    textField.borderStyle = UITextBorderStyleRoundedRect;
-    textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
-    textField.tag = 27;
-    textField.text = @"";
-    textField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    [alertView show];
-    [textField becomeFirstResponder];
+    [UIAlertView sf_inputWithTitle:NSLocalizedString(@"enter_bookmark_title", nil) message:nil cancelButtonTitle:NSLocalizedString(@"Cancel", nil) approveButtonTitle:NSLocalizedString(@"OK", nil) completion:^(NSString *input, BOOL cancelled) {
+        if (!cancelled) {
+            NSString *bookmarkTitle = input;
+            CGFloat scrollPosition = [self.delegate scrollPositionForTextBookmarkViewControllerToAddNewBookmark:self];
+            TextBookmark *bookmark = [[[TextBookmark alloc] init] autorelease];
+            bookmark.title = bookmarkTitle;
+            bookmark.scrollPosition = scrollPosition;
+            [self.bookmarkMgr addBookmark:bookmark forIdentifier:self.identifier];
+            [self reloadBookmarkList];
+        }
+    }];
 }
 
 - (void)onDondBtnTapped

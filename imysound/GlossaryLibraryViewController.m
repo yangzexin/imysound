@@ -79,10 +79,14 @@
 //    DictionaryViewController *dictVC = [DictionaryViewController sharedInstance];
 //    [self.navigationController presentModalViewController:dictVC animated:YES];
 //    [dictVC query:[self.glossaryList objectAtIndex:indexPath.row]];
-    GlossaryDetailViewController *vc = [[GlossaryDetailViewController alloc] 
-                                        initWithWord:[self.glossaryList objectAtIndex:indexPath.row]];
-    [self.navigationController pushViewController:vc animated:YES];
-    [vc release];
+    NSString *word = [self.glossaryList objectAtIndex:indexPath.row];
+    
+    UIReferenceLibraryViewController *ref = [[[UIReferenceLibraryViewController alloc] initWithTerm:word] autorelease];
+    [self.navigationController presentViewController:ref animated:YES completion:nil];
+//    GlossaryDetailViewController *vc = [[GlossaryDetailViewController alloc]
+//                                        initWithWord:[self.glossaryList objectAtIndex:indexPath.row]];
+//    [self.navigationController pushViewController:vc animated:YES];
+//    [vc release];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath

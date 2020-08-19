@@ -18,7 +18,6 @@
 #import "SoundSub.h"
 #import "PlayQueue.h"
 #import "SoundSubManager.h"
-#import "SFiOSKit.h"
 
 @interface SoundListViewController () <PopOutTableViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -71,7 +70,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+//    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     self.tableView = [[[UITableView alloc] initWithFrame:self.fullBounds] autorelease];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -422,7 +421,7 @@
         bottomLine = [[[SFLineView alloc] initWithFrame:CGRectMake(0, cell.contentView.frame.size.height - 1, cell.contentView.frame.size.width, 1)] autorelease];
         bottomLine.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
         bottomLine.tag = 1001;
-        bottomLine.color = [UIColor colorWithIntegerRed:230 green:230 blue:230];
+        bottomLine.color = [UIColor sf_colorWithRed:230 green:230 blue:230];
         bottomLine.alignment = SFLineViewAlignmentBottom;
         [cell.contentView addSubview:bottomLine];
     } else {

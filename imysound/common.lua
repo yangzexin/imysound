@@ -202,31 +202,13 @@ function dictionaryName()
 end
 
 function dictionaryURLForWord(word)
-    local haiciURL = "http://3g.dict.cn/s.php?q=";
+    local haiciURL = "http://m.dict.cn/msearch.php?q=";
     word = string.gsub(word, " ", "+");
     
     return haiciURL..word;
 end
 
 function filterDictionaryResult(result)
-    
-    local beginIndex3, endIndex3 = string.find(result, "</head>");
-    local prefixStr = "";
-    if beginIndex3 then
-        prefixStr = string.sub(result, 0, endIndex3);
-    end
-    --print(prefixStr);
-    --print(result);
-    local beginIndex1, endIndex1 = string.find(result, "<div class=\"content\">");
-    if beginIndex1 then
-        local beginIndex2, endIndex2 = string.find(result, "</body>");
-        local resultStr = string.sub(result, beginIndex1, beginIndex2);
-        resultStr = removeTag(resultStr, "a", false);
-        resultStr = prefixStr.."<body>"..resultStr.."</body>";
-        return resultStr;
-    else
-        return "";
-    end
     
     return result;
 end

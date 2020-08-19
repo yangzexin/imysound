@@ -53,7 +53,7 @@
     
     self.titleLabel = [[[UILabel alloc] init] autorelease];
     self.titleLabel.textAlignment = UITextAlignmentCenter;
-    self.titleLabel.textColor = [UIColor whiteColor];
+    self.titleLabel.textColor = [UIColor blackColor];
     self.titleLabel.backgroundColor = [UIColor clearColor];
     self.titleLabel.font = [UIFont boldSystemFontOfSize:20.0f];
     self.titleLabel.text = _customTitle;

@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12E13F3FF5C3A6E050B856BB /* libPods-imysound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B44F904DCB5150F7A2D61566 /* libPods-imysound.a */; };
 		3E055FDB17126C640019A6E6 /* FileGlossaryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E055FDA17126C640019A6E6 /* FileGlossaryManager.m */; };
 		3E055FDE17126CFA0019A6E6 /* SimpleFileKeyValueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E055FDD17126CFA0019A6E6 /* SimpleFileKeyValueManager.m */; };
 		3E055FE917128B630019A6E6 /* icon_glossary_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E055FE717128B630019A6E6 /* icon_glossary_list.png */; };
 		3E055FEA17128B630019A6E6 /* icon_glossary_list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E055FE817128B630019A6E6 /* icon_glossary_list@2x.png */; };
-		3E2B5FCD17110838004CA16E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FCC17110838004CA16E /* Default-568h@2x.png */; };
 		3E2B5FD017110898004CA16E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FD217110898004CA16E /* Localizable.strings */; };
 		3E2B5FD917111236004CA16E /* FileSoundSubManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2B5FD817111236004CA16E /* FileSoundSubManager.m */; };
 		3E2B5FE317111D65004CA16E /* icon_local_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FE117111D65004CA16E /* icon_local_list.png */; };
 		3E2B5FE417111D65004CA16E /* icon_local_list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FE217111D65004CA16E /* icon_local_list@2x.png */; };
 		3E2B5FE817111DC0004CA16E /* icon_news_list.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FE617111DC0004CA16E /* icon_news_list.png */; };
 		3E2B5FE917111DC0004CA16E /* icon_news_list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E2B5FE717111DC0004CA16E /* icon_news_list@2x.png */; };
+		3E362A7C24ED0DFD0020E269 /* libSFFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E362A7B24ED0DFD0020E269 /* libSFFoundation.a */; };
+		3E362A7F24ED0E420020E269 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E362A7E24ED0E420020E269 /* CoreImage.framework */; };
+		3E362A8024ED0E4F0020E269 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E362A6C24ED0D9B0020E269 /* ImageIO.framework */; };
+		3E362A8224ED0E890020E269 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E362A8124ED0E890020E269 /* Security.framework */; };
+		3E362A8424ED10320020E269 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E362A8324ED10320020E269 /* LaunchScreen.storyboard */; };
+		3E362A8C24ED1DD80020E269 /* libSFiOSKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E362A8B24ED1DB40020E269 /* libSFiOSKit.a */; };
 		3E434D1B19F1F6BB00A06166 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1A19F1F6BB00A06166 /* QuartzCore.framework */; };
 		3E434D1D19F1F6C800A06166 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1C19F1F6C800A06166 /* CoreLocation.framework */; };
 		3E434D1F19F1F6D200A06166 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E434D1E19F1F6D200A06166 /* CoreText.framework */; };
@@ -128,6 +132,16 @@
 		CFC2365C15B94A19001BFD88 /* HexMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC2365B15B94A19001BFD88 /* HexMaker.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3E362A8A24ED1DB40020E269 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E362A7424ED0DF60020E269 /* SFiOSKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3ED59DB91828D33A002531DD;
+			remoteInfo = SFiOSKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3E055FD917126C640019A6E6 /* FileGlossaryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileGlossaryManager.h; sourceTree = "<group>"; };
 		3E055FDA17126C640019A6E6 /* FileGlossaryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileGlossaryManager.m; sourceTree = "<group>"; };
@@ -135,7 +149,6 @@
 		3E055FDD17126CFA0019A6E6 /* SimpleFileKeyValueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleFileKeyValueManager.m; sourceTree = "<group>"; };
 		3E055FE717128B630019A6E6 /* icon_glossary_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_glossary_list.png; sourceTree = "<group>"; };
 		3E055FE817128B630019A6E6 /* icon_glossary_list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_glossary_list@2x.png"; sourceTree = "<group>"; };
-		3E2B5FCC17110838004CA16E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3E2B5FD117110898004CA16E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3E2B5FD3171108ED004CA16E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		3E2B5FD4171108ED004CA16E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -145,6 +158,13 @@
 		3E2B5FE217111D65004CA16E /* icon_local_list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_local_list@2x.png"; sourceTree = "<group>"; };
 		3E2B5FE617111DC0004CA16E /* icon_news_list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_news_list.png; sourceTree = "<group>"; };
 		3E2B5FE717111DC0004CA16E /* icon_news_list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_news_list@2x.png"; sourceTree = "<group>"; };
+		3E362A6924ED0D630020E269 /* libSFFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSFFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E362A6C24ED0D9B0020E269 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		3E362A7424ED0DF60020E269 /* SFiOSKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SFiOSKit.xcodeproj; path = ../../SFLibraries/SFiOSKit/SFiOSKit.xcodeproj; sourceTree = "<group>"; };
+		3E362A7B24ED0DFD0020E269 /* libSFFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSFFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E362A7E24ED0E420020E269 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		3E362A8124ED0E890020E269 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3E362A8324ED10320020E269 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E434D1819F1F6B400A06166 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3E434D1A19F1F6BB00A06166 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3E434D1C19F1F6C800A06166 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -264,7 +284,7 @@
 		CF52CA2E15B41931000854CC /* DictionaryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryCache.h; sourceTree = "<group>"; };
 		CF52CA2F15B41931000854CC /* DictonaryWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictonaryWord.h; sourceTree = "<group>"; };
 		CF52CA3015B41931000854CC /* DictonaryWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictonaryWord.m; sourceTree = "<group>"; };
-		CF52CA3815B41A12000854CC /* common.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = common.lua; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.lua; };
+		CF52CA3815B41A12000854CC /* common.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = common.lua; sourceTree = "<group>"; };
 		CF52CA3915B41A12000854CC /* LuaHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaHelper.h; sourceTree = "<group>"; };
 		CF52CA3A15B41A12000854CC /* LuaHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuaHelper.m; sourceTree = "<group>"; };
 		CF52CA3E15B41A23000854CC /* lapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lapi.c; sourceTree = "<group>"; };
@@ -350,8 +370,6 @@
 		CF8AA0D915B5039400738582 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CFC2365A15B94A19001BFD88 /* HexMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexMaker.h; sourceTree = "<group>"; };
 		CFC2365B15B94A19001BFD88 /* HexMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexMaker.m; sourceTree = "<group>"; };
-		D1697F7F91BAFF1DD3BA2096 /* Pods-imysound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imysound.release.xcconfig"; path = "Pods/Target Support Files/Pods-imysound/Pods-imysound.release.xcconfig"; sourceTree = "<group>"; };
-		ED31CD177AFEEB4C1F2E9C0B /* Pods-imysound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imysound.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imysound/Pods-imysound.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +377,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E362A8C24ED1DD80020E269 /* libSFiOSKit.a in Frameworks */,
+				3E362A8224ED0E890020E269 /* Security.framework in Frameworks */,
+				3E362A8024ED0E4F0020E269 /* ImageIO.framework in Frameworks */,
+				3E362A7F24ED0E420020E269 /* CoreImage.framework in Frameworks */,
+				3E362A7C24ED0DFD0020E269 /* libSFFoundation.a in Frameworks */,
 				3E434D2019F1F6D900A06166 /* MapKit.framework in Frameworks */,
 				3E434D1F19F1F6D200A06166 /* CoreText.framework in Frameworks */,
 				3E434D1D19F1F6C800A06166 /* CoreLocation.framework in Frameworks */,
@@ -370,7 +393,6 @@
 				67C32C271599DD3D000E5533 /* UIKit.framework in Frameworks */,
 				67C32C291599DD3D000E5533 /* Foundation.framework in Frameworks */,
 				67C32C2B1599DD3D000E5533 /* CoreGraphics.framework in Frameworks */,
-				12E13F3FF5C3A6E050B856BB /* libPods-imysound.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,13 +423,20 @@
 			name = Resoures;
 			sourceTree = "<group>";
 		};
-		53754055EF790760405100CD /* Pods */ = {
+		3E362A8524ED1DAC0020E269 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				ED31CD177AFEEB4C1F2E9C0B /* Pods-imysound.debug.xcconfig */,
-				D1697F7F91BAFF1DD3BA2096 /* Pods-imysound.release.xcconfig */,
+				3E362A7424ED0DF60020E269 /* SFiOSKit.xcodeproj */,
 			);
-			name = Pods;
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		3E362A8724ED1DB40020E269 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E362A8B24ED1DB40020E269 /* libSFiOSKit.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		678586B915AC624E00B096C1 /* SoundSubManager */ = {
@@ -551,12 +580,11 @@
 		67C32C171599DD3D000E5533 = {
 			isa = PBXGroup;
 			children = (
-				3E2B5FCC17110838004CA16E /* Default-568h@2x.png */,
 				67C32C2C1599DD3D000E5533 /* imysound */,
+				3E362A8524ED1DAC0020E269 /* Dependencies */,
 				3E2B5FDA17111879004CA16E /* AddInFrameworks */,
 				67C32C251599DD3D000E5533 /* Frameworks */,
 				67C32C231599DD3D000E5533 /* Products */,
-				53754055EF790760405100CD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -571,6 +599,11 @@
 		67C32C251599DD3D000E5533 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E362A8124ED0E890020E269 /* Security.framework */,
+				3E362A7E24ED0E420020E269 /* CoreImage.framework */,
+				3E362A7B24ED0DFD0020E269 /* libSFFoundation.a */,
+				3E362A6C24ED0D9B0020E269 /* ImageIO.framework */,
+				3E362A6924ED0D630020E269 /* libSFFoundation.a */,
 				3E434D1E19F1F6D200A06166 /* CoreText.framework */,
 				3E434D1C19F1F6C800A06166 /* CoreLocation.framework */,
 				3E434D1A19F1F6BB00A06166 /* QuartzCore.framework */,
@@ -608,6 +641,7 @@
 		67C32C2D1599DD3D000E5533 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3E362A8324ED10320020E269 /* LaunchScreen.storyboard */,
 				67C32C2E1599DD3D000E5533 /* imysound-Info.plist */,
 				67C32C2F1599DD3D000E5533 /* InfoPlist.strings */,
 				67C32C321599DD3D000E5533 /* main.m */,
@@ -816,12 +850,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67C32C3A1599DD3D000E5533 /* Build configuration list for PBXNativeTarget "imysound" */;
 			buildPhases = (
-				49CAA17E7BC1364776219781 /* Check Pods Manifest.lock */,
 				67C32C1E1599DD3D000E5533 /* Sources */,
 				67C32C1F1599DD3D000E5533 /* Frameworks */,
 				67C32C201599DD3D000E5533 /* Resources */,
-				F95EE1F1BBED5A88AE092AAE /* Embed Pods Frameworks */,
-				17C63363AF2B15F07B26D1F7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -838,25 +869,48 @@
 		67C32C191599DD3D000E5533 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 1030;
+				TargetAttributes = {
+					67C32C211599DD3D000E5533 = {
+						DevelopmentTeam = 5HNESHK23T;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 67C32C1C1599DD3D000E5533 /* Build configuration list for PBXProject "imysound" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				"zh-Hans",
 			);
 			mainGroup = 67C32C171599DD3D000E5533;
 			productRefGroup = 67C32C231599DD3D000E5533 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3E362A8724ED1DB40020E269 /* Products */;
+					ProjectRef = 3E362A7424ED0DF60020E269 /* SFiOSKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				67C32C211599DD3D000E5533 /* imysound */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3E362A8B24ED1DB40020E269 /* libSFiOSKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSFiOSKit.a;
+			remoteRef = 3E362A8A24ED1DB40020E269 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		67C32C201599DD3D000E5533 /* Resources */ = {
@@ -865,8 +919,8 @@
 			files = (
 				67C32C311599DD3D000E5533 /* InfoPlist.strings in Resources */,
 				CF52CA3B15B41A12000854CC /* common.lua in Resources */,
-				3E2B5FCD17110838004CA16E /* Default-568h@2x.png in Resources */,
 				3E2B5FD017110898004CA16E /* Localizable.strings in Resources */,
+				3E362A8424ED10320020E269 /* LaunchScreen.storyboard in Resources */,
 				3E2B5FE317111D65004CA16E /* icon_local_list.png in Resources */,
 				3E2B5FE417111D65004CA16E /* icon_local_list@2x.png in Resources */,
 				3E2B5FE817111DC0004CA16E /* icon_news_list.png in Resources */,
@@ -877,54 +931,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		17C63363AF2B15F07B26D1F7 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imysound/Pods-imysound-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49CAA17E7BC1364776219781 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F95EE1F1BBED5A88AE092AAE /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imysound/Pods-imysound-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67C32C1E1599DD3D000E5533 /* Sources */ = {
@@ -1059,15 +1065,32 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 5HNESHK23T;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1075,10 +1098,18 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				HEADER_SEARCH_PATHS = (
+					../SFLibraries/SFiOSKit,
+					../SFLibraries/SFFoundation,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1088,19 +1119,42 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 5HNESHK23T;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				HEADER_SEARCH_PATHS = (
+					../SFLibraries/SFiOSKit,
+					../SFLibraries/SFFoundation,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1110,41 +1164,52 @@
 		};
 		67C32C3B1599DD3D000E5533 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED31CD177AFEEB4C1F2E9C0B /* Pods-imysound.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HNESHK23T;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "imysound/imysound-Prefix.pch";
 				INFOPLIST_FILE = "imysound/imysound-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yzx.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "298763D3-85F4-4BC0-9F3D-0CC714844FD5";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(inherited)";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		67C32C3C1599DD3D000E5533 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1697F7F91BAFF1DD3BA2096 /* Pods-imysound.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HNESHK23T;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "imysound/imysound-Prefix.pch";
 				INFOPLIST_FILE = "imysound/imysound-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yzx.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "298763D3-85F4-4BC0-9F3D-0CC714844FD5";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				USER_HEADER_SEARCH_PATHS = "$(inherited)";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

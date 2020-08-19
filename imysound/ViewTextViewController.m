@@ -81,7 +81,7 @@
     self.textView = [[[UITextView alloc] initWithFrame:frame] autorelease];
     [self.view addSubview:self.textView];
     self.textView.editable = NO;
-    self.textView.font = [UIFont systemFontOfSize:14.0f];
+    self.textView.font = [UIFont systemFontOfSize:18.0f];
     
     self.textView.text = [NSString stringWithContentsOfFile:self.textFilePath encoding:NSASCIIStringEncoding error:nil];
     self.textView.delegate = self;
@@ -97,11 +97,12 @@
         self.navigationItem.rightBarButtonItem = self.nowPlayingBtn;
     }
     
-    CGFloat tmpY = self.view.bounds.size.height - self.navigationController.navigationBar.frame.size.height - 44.0f;
+    CGFloat tmpY = self.view.bounds.size.height - 84.0f;
     UIToolbar *toolbar = [[[UIToolbar alloc] initWithFrame:
-                           CGRectMake(0, tmpY, self.view.bounds.size.width, 44.0f)] autorelease];
+                           CGRectMake(0, tmpY, self.view.bounds.size.width, 84.0f)] autorelease];
     [self.view addSubview:toolbar];
-    toolbar.barStyle = UIBarStyleBlack;
+    toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+//    toolbar.barStyle = UIBarStyleBlack;
     
     NSMutableArray *toolbarItems = [NSMutableArray array];
     
